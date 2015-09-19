@@ -291,5 +291,20 @@ namespace Cryptograph_Whois_DNS_Tools
                 MessageBox.Show("TXT Records window already open", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
+
+        private void sOAToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmSOA frm = new frmSOA();
+            if (Application.OpenForms["frmSOA"] == null)
+            {
+                frm.Name = "frmSOA";
+                frm.Show();
+            }
+            else
+            {
+                //frm.WindowState = WindowState;
+                MessageBox.Show("Start of Authority Record Records window already open", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
     }
 }

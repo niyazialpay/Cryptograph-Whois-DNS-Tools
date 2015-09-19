@@ -127,6 +127,22 @@ namespace Cryptograph_Whois_DNS_Tools
             return items;
         }
 
+        public IList<string> SOARecord(string name)
+        {
+            IList<string> records = new List<string>();
+            const QType qType = QType.SOA;
+            const QClass qClass = QClass.IN;
+
+            Response response = _resolver.Query(name, qType, qClass);
+
+            foreach (RecordSOA record in response.RecordsSOA)
+            {
+                records.Add(record.ToString());
+            }
+
+            return records;
+        }
+
         public IList<string> GetQClasses()
         {
             IList<string> items = new List<string>();

@@ -143,6 +143,16 @@ namespace Cryptograph_Whois_DNS_Tools.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap soa {
+            get {
+                object obj = ResourceManager.GetObject("soa", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap txt {
             get {
                 object obj = ResourceManager.GetObject("txt", resourceCulture);
