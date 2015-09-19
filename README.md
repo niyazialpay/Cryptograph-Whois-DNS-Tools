@@ -1,3 +1,3 @@
-# Cryptograph-Whois-DNS-Tools
+# Cryptograph Whois DNS Tools
 
-You can query whois or DNS for domains this application
+You can query for whois or DNS with this application. I used Heijden.DNS DLL file when I developing this application.
