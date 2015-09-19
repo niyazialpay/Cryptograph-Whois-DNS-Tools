@@ -1,0 +1,16 @@
+c:\users\muhammedniyazi\documents\visual studio 2015\Projects\Cryptograph Whois Query\Cryptograph Whois Query\bin\Debug\Cryptograph Whois Query.exe.config
+c:\users\muhammedniyazi\documents\visual studio 2015\Projects\Cryptograph Whois Query\Cryptograph Whois Query\bin\Debug\Cryptograph Whois Query.exe
+c:\users\muhammedniyazi\documents\visual studio 2015\Projects\Cryptograph Whois Query\Cryptograph Whois Query\bin\Debug\Cryptograph Whois Query.pdb
+c:\users\muhammedniyazi\documents\visual studio 2015\Projects\Cryptograph Whois Query\Cryptograph Whois Query\obj\Debug\Cryptograph Whois Query.csprojResolveAssemblyReference.cache
+c:\users\muhammedniyazi\documents\visual studio 2015\Projects\Cryptograph Whois Query\Cryptograph Whois Query\obj\Debug\Cryptograph_Whois_Query.Properties.Resources.resources
+c:\users\muhammedniyazi\documents\visual studio 2015\Projects\Cryptograph Whois Query\Cryptograph Whois Query\obj\Debug\Cryptograph Whois Query.csproj.GenerateResource.Cache
+c:\users\muhammedniyazi\documents\visual studio 2015\Projects\Cryptograph Whois Query\Cryptograph Whois Query\obj\Debug\Cryptograph Whois Query.exe
+c:\users\muhammedniyazi\documents\visual studio 2015\Projects\Cryptograph Whois Query\Cryptograph Whois Query\obj\Debug\Cryptograph Whois Query.pdb
+c:\users\muhammedniyazi\documents\visual studio 2015\Projects\Cryptograph Whois Query\Cryptograph Whois Query\obj\Debug\Cryptograph_Whois_Query.frmMain.resources
+c:\users\muhammedniyazi\documents\visual studio 2015\Projects\Cryptograph Whois Query\Cryptograph Whois Query\bin\Debug\System.Net.Http.dll
+c:\users\muhammedniyazi\documents\visual studio 2015\Projects\Cryptograph Whois Query\Cryptograph Whois Query\bin\Debug\System.Net.Http.xml
+C:\Users\MuhammedNiyazi\Documents\Visual Studio 2015\Projects\Cryptograph Whois Query\Cryptograph Whois Query\obj\Debug\Cryptograph_Whois_Query.frmDNS.resources
+C:\Users\MuhammedNiyazi\Documents\Visual Studio 2015\Projects\Cryptograph Whois Query\Cryptograph Whois Query\obj\Debug\Cryptograph_Whois_Query.frmIDN.resources
+C:\Users\MuhammedNiyazi\Documents\Visual Studio 2015\Projects\Cryptograph Whois Query\Cryptograph Whois Query\bin\Debug\Cryptograph Whois Q.exe.config
+C:\Users\MuhammedNiyazi\Documents\Visual Studio 2015\Projects\Cryptograph Whois Query\Cryptograph Whois Query\bin\Debug\Cryptograph Whois & DNS Tools.exe.config
+C:\Users\MuhammedNiyazi\Documents\Visual Studio 2015\Projects\Cryptograph Whois Query\Cryptograph Whois Query\obj\Debug\Cryptograph_Whois_DNS_Tools.Properties.Resources.resources
