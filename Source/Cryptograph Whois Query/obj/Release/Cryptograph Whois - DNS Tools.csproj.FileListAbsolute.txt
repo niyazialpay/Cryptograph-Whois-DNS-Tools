@@ -34,8 +34,6 @@ C:\Users\MuhammedNiyazi\Documents\GitHub\Cryptograph-Whois-DNS-Tools\Source\Cryp
 C:\Users\MuhammedNiyazi\Documents\GitHub\Cryptograph-Whois-DNS-Tools\Source\Cryptograph Whois Query\obj\Release\Cryptograph Whois - DNS Tools.csprojResolveAssemblyReference.cache
 C:\Users\MuhammedNiyazi\Documents\GitHub\Cryptograph-Whois-DNS-Tools\Source\Cryptograph Whois Query\obj\Release\Cryptograph_Whois_DNS_Tools.frmA.resources
 C:\Users\MuhammedNiyazi\Documents\GitHub\Cryptograph-Whois-DNS-Tools\Source\Cryptograph Whois Query\obj\Release\Cryptograph_Whois_DNS_Tools.frmCname.resources
-C:\Users\MuhammedNiyazi\Documents\GitHub\Cryptograph-Whois-DNS-Tools\Source\Cryptograph Whois Query\obj\Release\Cryptograph_Whois_DNS_Tools.frmDNS.resources
-C:\Users\MuhammedNiyazi\Documents\GitHub\Cryptograph-Whois-DNS-Tools\Source\Cryptograph Whois Query\obj\Release\Cryptograph_Whois_DNS_Tools.frmIDN.resources
 C:\Users\MuhammedNiyazi\Documents\GitHub\Cryptograph-Whois-DNS-Tools\Source\Cryptograph Whois Query\obj\Release\Cryptograph_Whois_DNS_Tools.frmMain.resources
 C:\Users\MuhammedNiyazi\Documents\GitHub\Cryptograph-Whois-DNS-Tools\Source\Cryptograph Whois Query\obj\Release\Cryptograph_Whois_DNS_Tools.frmNS.resources
 C:\Users\MuhammedNiyazi\Documents\GitHub\Cryptograph-Whois-DNS-Tools\Source\Cryptograph Whois Query\obj\Release\Cryptograph_Whois_DNS_Tools.frmPTR.resources

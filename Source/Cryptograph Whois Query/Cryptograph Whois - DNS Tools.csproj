@@ -111,18 +111,6 @@
     <Compile Include="frmCname.Designer.cs">
       <DependentUpon>frmCname.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmDNS.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmDNS.Designer.cs">
-      <DependentUpon>frmDNS.cs</DependentUpon>
-    </Compile>
-    <Compile Include="frmIDN.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmIDN.Designer.cs">
-      <DependentUpon>frmIDN.cs</DependentUpon>
-    </Compile>
     <Compile Include="frmMain.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -167,12 +155,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmCname.resx">
       <DependentUpon>frmCname.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmDNS.resx">
-      <DependentUpon>frmDNS.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmIDN.resx">
-      <DependentUpon>frmIDN.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmMain.resx">
       <DependentUpon>frmMain.cs</DependentUpon>
