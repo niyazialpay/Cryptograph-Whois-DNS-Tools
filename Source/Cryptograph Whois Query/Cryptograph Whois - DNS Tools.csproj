@@ -99,16 +99,16 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DNS.cs" />
-    <Compile Include="frmA.cs">
+    <Compile Include="DNSToolsWindows\frmA.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmA.Designer.cs">
+    <Compile Include="DNSToolsWindows\frmA.Designer.cs">
       <DependentUpon>frmA.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmCname.cs">
+    <Compile Include="DNSToolsWindows\frmCname.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmCname.Designer.cs">
+    <Compile Include="DNSToolsWindows\frmCname.Designer.cs">
       <DependentUpon>frmCname.cs</DependentUpon>
     </Compile>
     <Compile Include="frmMain.cs">
@@ -117,73 +117,73 @@
     <Compile Include="frmMain.Designer.cs">
       <DependentUpon>frmMain.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmNS.cs">
+    <Compile Include="DNSToolsWindows\frmNS.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmNS.Designer.cs">
+    <Compile Include="DNSToolsWindows\frmNS.Designer.cs">
       <DependentUpon>frmNS.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmPTR.cs">
+    <Compile Include="DNSToolsWindows\frmPTR.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmPTR.Designer.cs">
+    <Compile Include="DNSToolsWindows\frmPTR.Designer.cs">
       <DependentUpon>frmPTR.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmSOA.cs">
+    <Compile Include="DNSToolsWindows\frmSOA.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmSOA.Designer.cs">
+    <Compile Include="DNSToolsWindows\frmSOA.Designer.cs">
       <DependentUpon>frmSOA.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmTXT.cs">
+    <Compile Include="DNSToolsWindows\frmTXT.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmTXT.Designer.cs">
+    <Compile Include="DNSToolsWindows\frmTXT.Designer.cs">
       <DependentUpon>frmTXT.cs</DependentUpon>
     </Compile>
-    <Compile Include="frnMX.cs">
+    <Compile Include="DNSToolsWindows\frnMX.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frnMX.Designer.cs">
+    <Compile Include="DNSToolsWindows\frnMX.Designer.cs">
       <DependentUpon>frnMX.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="whois.cs" />
-    <EmbeddedResource Include="frmA.resx">
+    <EmbeddedResource Include="DNSToolsWindows\frmA.resx">
       <DependentUpon>frmA.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmCname.resx">
+    <EmbeddedResource Include="DNSToolsWindows\frmCname.resx">
       <DependentUpon>frmCname.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmMain.resx">
       <DependentUpon>frmMain.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmNS.resx">
+    <EmbeddedResource Include="DNSToolsWindows\frmNS.resx">
       <DependentUpon>frmNS.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmPTR.resx">
+    <EmbeddedResource Include="DNSToolsWindows\frmPTR.resx">
       <DependentUpon>frmPTR.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmSOA.resx">
+    <EmbeddedResource Include="DNSToolsWindows\frmSOA.resx">
       <DependentUpon>frmSOA.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmTXT.resx">
+    <EmbeddedResource Include="DNSToolsWindows\frmTXT.resx">
       <DependentUpon>frmTXT.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frnMX.resx">
+    <EmbeddedResource Include="DNSToolsWindows\frnMX.resx">
       <DependentUpon>frnMX.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
-    </Compile>
     <None Include="Properties\app.manifest" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -216,13 +216,9 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\whois.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\yast-dns.png" />
-  </ItemGroup>
-  <ItemGroup>
     <Content Include="favicon.ico" />
+    <None Include="Resources\dnsimage.png" />
+    <Content Include="Resources\whois.png" />
     <None Include="Resources\soa.png" />
     <None Include="Resources\http.png" />
     <None Include="Resources\txt.png" />
@@ -230,10 +226,7 @@
     <None Include="Resources\mx.png" />
     <None Include="Resources\cname.png" />
     <None Include="Resources\a.png" />
-    <None Include="Resources\slide-domain1.png" />
-    <None Include="Resources\yast-dns1.png" />
     <None Include="Resources\edit_clear.png" />
-    <None Include="Resources\slide-domain.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -113,16 +113,6 @@ namespace Cryptograph_Whois_DNS_Tools.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap idnimage {
-            get {
-                object obj = ResourceManager.GetObject("idnimage", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap mx {
             get {
                 object obj = ResourceManager.GetObject("mx", resourceCulture);
@@ -156,16 +146,6 @@ namespace Cryptograph_Whois_DNS_Tools.Properties {
         internal static System.Drawing.Bitmap txt {
             get {
                 object obj = ResourceManager.GetObject("txt", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap whois {
-            get {
-                object obj = ResourceManager.GetObject("whois", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

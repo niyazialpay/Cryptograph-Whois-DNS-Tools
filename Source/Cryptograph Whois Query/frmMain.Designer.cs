@@ -30,9 +30,6 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMain));
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.statusStrip1 = new System.Windows.Forms.StatusStrip();
-            this.toolStripDropDownButton1 = new System.Windows.Forms.ToolStripDropDownButton();
-            this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
@@ -65,17 +62,42 @@
             this.idnListView = new System.Windows.Forms.ListView();
             this.domain = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.idndomain = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.toolStripDropDownButton1 = new System.Windows.Forms.ToolStripDropDownButton();
+            this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolStripDropDownButton2 = new System.Windows.Forms.ToolStripDropDownButton();
             this.aToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem7 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem8 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem9 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem10 = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItem11 = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItem12 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem13 = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem12 = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem11 = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripDropDownButton3 = new System.Windows.Forms.ToolStripDropDownButton();
+            this.toolStripStatusLabel2 = new System.Windows.Forms.ToolStripStatusLabel();
+            this.toolStripDropDownButton4 = new System.Windows.Forms.ToolStripDropDownButton();
+            this.toolStripStatusLabel3 = new System.Windows.Forms.ToolStripStatusLabel();
+            this.toolStripStatusLabel4 = new System.Windows.Forms.ToolStripStatusLabel();
+            this.toolStripDropDownButton5 = new System.Windows.Forms.ToolStripDropDownButton();
+            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem4 = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem5 = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem6 = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem14 = new System.Windows.Forms.ToolStripMenuItem();
+            this.dnsStatusBar = new System.Windows.Forms.StatusStrip();
+            this.toolStripStatusLabel5 = new System.Windows.Forms.ToolStripStatusLabel();
+            this.toolStripDropDownButton6 = new System.Windows.Forms.ToolStripDropDownButton();
+            this.toolStripDropDownButton7 = new System.Windows.Forms.ToolStripDropDownButton();
+            this.toolStripMenuItem15 = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem16 = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem17 = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem18 = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem19 = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem20 = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem21 = new System.Windows.Forms.ToolStripMenuItem();
             this.tableLayoutPanel1.SuspendLayout();
-            this.statusStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
@@ -84,6 +106,7 @@
             this.tabPage2.SuspendLayout();
             this.tableLayoutPanel5.SuspendLayout();
             this.tabPage3.SuspendLayout();
+            this.dnsStatusBar.SuspendLayout();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -95,8 +118,8 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel1.Controls.Add(this.statusStrip1, 0, 1);
             this.tableLayoutPanel1.Controls.Add(this.panel1, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.dnsStatusBar, 0, 1);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
@@ -106,34 +129,6 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(934, 611);
             this.tableLayoutPanel1.TabIndex = 0;
-            // 
-            // statusStrip1
-            // 
-            this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripDropDownButton1,
-            this.toolStripStatusLabel1,
-            this.toolStripDropDownButton2});
-            this.statusStrip1.Location = new System.Drawing.Point(0, 589);
-            this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Size = new System.Drawing.Size(934, 22);
-            this.statusStrip1.TabIndex = 1;
-            this.statusStrip1.Text = "statusStrip1";
-            // 
-            // toolStripDropDownButton1
-            // 
-            this.toolStripDropDownButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-            this.toolStripDropDownButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripDropDownButton1.Image")));
-            this.toolStripDropDownButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripDropDownButton1.Name = "toolStripDropDownButton1";
-            this.toolStripDropDownButton1.Size = new System.Drawing.Size(106, 20);
-            this.toolStripDropDownButton1.Text = "M. Niyazi ALPAY";
-            this.toolStripDropDownButton1.Click += new System.EventHandler(this.toolStripStatusLabel1_Click);
-            // 
-            // toolStripStatusLabel1
-            // 
-            this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
-            this.toolStripStatusLabel1.Size = new System.Drawing.Size(10, 17);
-            this.toolStripStatusLabel1.Text = "|";
             // 
             // panel1
             // 
@@ -214,7 +209,7 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(914, 491);
+            this.tabPage1.Size = new System.Drawing.Size(914, 516);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Whois";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -225,7 +220,7 @@
             this.webBrowser1.Location = new System.Drawing.Point(3, 3);
             this.webBrowser1.MinimumSize = new System.Drawing.Size(20, 20);
             this.webBrowser1.Name = "webBrowser1";
-            this.webBrowser1.Size = new System.Drawing.Size(908, 485);
+            this.webBrowser1.Size = new System.Drawing.Size(908, 510);
             this.webBrowser1.TabIndex = 0;
             // 
             // tabPage2
@@ -435,7 +430,7 @@
             this.tabPage3.Controls.Add(this.idnListView);
             this.tabPage3.Location = new System.Drawing.Point(4, 22);
             this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Size = new System.Drawing.Size(914, 491);
+            this.tabPage3.Size = new System.Drawing.Size(914, 516);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "IDN Converter";
             this.tabPage3.UseVisualStyleBackColor = true;
@@ -450,7 +445,7 @@
             this.idnListView.GridLines = true;
             this.idnListView.Location = new System.Drawing.Point(0, 0);
             this.idnListView.Name = "idnListView";
-            this.idnListView.Size = new System.Drawing.Size(914, 491);
+            this.idnListView.Size = new System.Drawing.Size(914, 516);
             this.idnListView.TabIndex = 2;
             this.idnListView.UseCompatibleStateImageBehavior = false;
             this.idnListView.View = System.Windows.Forms.View.Details;
@@ -465,83 +460,225 @@
             this.idndomain.Text = "IDN";
             this.idndomain.Width = 430;
             // 
+            // toolStripDropDownButton1
+            // 
+            this.toolStripDropDownButton1.Name = "toolStripDropDownButton1";
+            this.toolStripDropDownButton1.Size = new System.Drawing.Size(23, 23);
+            // 
+            // toolStripStatusLabel1
+            // 
+            this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
+            this.toolStripStatusLabel1.Size = new System.Drawing.Size(23, 23);
+            // 
             // toolStripDropDownButton2
             // 
-            this.toolStripDropDownButton2.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.aToolStripMenuItem,
-            this.toolStripMenuItem7,
-            this.toolStripMenuItem8,
-            this.toolStripMenuItem9,
-            this.toolStripMenuItem10,
-            this.toolStripMenuItem13,
-            this.toolStripMenuItem12});
-            this.toolStripDropDownButton2.Image = global::Cryptograph_Whois_DNS_Tools.Properties.Resources.dnsimage;
-            this.toolStripDropDownButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripDropDownButton2.Name = "toolStripDropDownButton2";
-            this.toolStripDropDownButton2.Size = new System.Drawing.Size(90, 20);
-            this.toolStripDropDownButton2.Text = "DNS Tools";
+            this.toolStripDropDownButton2.Size = new System.Drawing.Size(23, 23);
             // 
             // aToolStripMenuItem
             // 
-            this.aToolStripMenuItem.Image = global::Cryptograph_Whois_DNS_Tools.Properties.Resources.a;
             this.aToolStripMenuItem.Name = "aToolStripMenuItem";
-            this.aToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.aToolStripMenuItem.Text = "A";
-            this.aToolStripMenuItem.Click += new System.EventHandler(this.aToolStripMenuItem_Click);
+            this.aToolStripMenuItem.Size = new System.Drawing.Size(32, 19);
             // 
             // toolStripMenuItem7
             // 
-            this.toolStripMenuItem7.Image = global::Cryptograph_Whois_DNS_Tools.Properties.Resources.cname;
             this.toolStripMenuItem7.Name = "toolStripMenuItem7";
-            this.toolStripMenuItem7.Size = new System.Drawing.Size(152, 22);
-            this.toolStripMenuItem7.Text = "CNAME";
-            this.toolStripMenuItem7.Click += new System.EventHandler(this.cNAMEToolStripMenuItem_Click);
+            this.toolStripMenuItem7.Size = new System.Drawing.Size(32, 19);
             // 
             // toolStripMenuItem8
             // 
-            this.toolStripMenuItem8.Image = global::Cryptograph_Whois_DNS_Tools.Properties.Resources.http;
             this.toolStripMenuItem8.Name = "toolStripMenuItem8";
-            this.toolStripMenuItem8.Size = new System.Drawing.Size(152, 22);
-            this.toolStripMenuItem8.Text = "NS";
-            this.toolStripMenuItem8.Click += new System.EventHandler(this.nSToolStripMenuItem_Click);
+            this.toolStripMenuItem8.Size = new System.Drawing.Size(32, 19);
             // 
             // toolStripMenuItem9
             // 
-            this.toolStripMenuItem9.Image = global::Cryptograph_Whois_DNS_Tools.Properties.Resources.mx;
             this.toolStripMenuItem9.Name = "toolStripMenuItem9";
-            this.toolStripMenuItem9.Size = new System.Drawing.Size(152, 22);
-            this.toolStripMenuItem9.Text = "MX";
-            this.toolStripMenuItem9.Click += new System.EventHandler(this.mXToolStripMenuItem_Click);
+            this.toolStripMenuItem9.Size = new System.Drawing.Size(32, 19);
             // 
             // toolStripMenuItem10
             // 
-            this.toolStripMenuItem10.Image = global::Cryptograph_Whois_DNS_Tools.Properties.Resources.ptr;
             this.toolStripMenuItem10.Name = "toolStripMenuItem10";
-            this.toolStripMenuItem10.Size = new System.Drawing.Size(152, 22);
-            this.toolStripMenuItem10.Text = "PTR";
-            this.toolStripMenuItem10.Click += new System.EventHandler(this.pTRToolStripMenuItem_Click);
+            this.toolStripMenuItem10.Size = new System.Drawing.Size(32, 19);
+            // 
+            // toolStripMenuItem13
+            // 
+            this.toolStripMenuItem13.Name = "toolStripMenuItem13";
+            this.toolStripMenuItem13.Size = new System.Drawing.Size(32, 19);
+            // 
+            // toolStripMenuItem12
+            // 
+            this.toolStripMenuItem12.Name = "toolStripMenuItem12";
+            this.toolStripMenuItem12.Size = new System.Drawing.Size(32, 19);
             // 
             // toolStripMenuItem11
             // 
             this.toolStripMenuItem11.Name = "toolStripMenuItem11";
-            this.toolStripMenuItem11.Size = new System.Drawing.Size(186, 22);
-            this.toolStripMenuItem11.Text = "TXT";
+            this.toolStripMenuItem11.Size = new System.Drawing.Size(32, 19);
             // 
-            // toolStripMenuItem12
+            // toolStripDropDownButton3
             // 
-            this.toolStripMenuItem12.Image = global::Cryptograph_Whois_DNS_Tools.Properties.Resources.soa;
-            this.toolStripMenuItem12.Name = "toolStripMenuItem12";
-            this.toolStripMenuItem12.Size = new System.Drawing.Size(152, 22);
-            this.toolStripMenuItem12.Text = "SOA";
-            this.toolStripMenuItem12.Click += new System.EventHandler(this.sOAToolStripMenuItem_Click);
+            this.toolStripDropDownButton3.Name = "toolStripDropDownButton3";
+            this.toolStripDropDownButton3.Size = new System.Drawing.Size(23, 23);
             // 
-            // toolStripMenuItem13
+            // toolStripStatusLabel2
             // 
-            this.toolStripMenuItem13.Image = global::Cryptograph_Whois_DNS_Tools.Properties.Resources.txt;
-            this.toolStripMenuItem13.Name = "toolStripMenuItem13";
-            this.toolStripMenuItem13.Size = new System.Drawing.Size(152, 22);
-            this.toolStripMenuItem13.Text = "TXT";
-            this.toolStripMenuItem13.Click += new System.EventHandler(this.tXTToolStripMenuItem_Click);
+            this.toolStripStatusLabel2.Name = "toolStripStatusLabel2";
+            this.toolStripStatusLabel2.Size = new System.Drawing.Size(23, 23);
+            // 
+            // toolStripDropDownButton4
+            // 
+            this.toolStripDropDownButton4.Name = "toolStripDropDownButton4";
+            this.toolStripDropDownButton4.Size = new System.Drawing.Size(23, 23);
+            // 
+            // toolStripStatusLabel3
+            // 
+            this.toolStripStatusLabel3.Name = "toolStripStatusLabel3";
+            this.toolStripStatusLabel3.Size = new System.Drawing.Size(23, 23);
+            // 
+            // toolStripStatusLabel4
+            // 
+            this.toolStripStatusLabel4.Name = "toolStripStatusLabel4";
+            this.toolStripStatusLabel4.Size = new System.Drawing.Size(23, 23);
+            // 
+            // toolStripDropDownButton5
+            // 
+            this.toolStripDropDownButton5.Name = "toolStripDropDownButton5";
+            this.toolStripDropDownButton5.Size = new System.Drawing.Size(23, 23);
+            // 
+            // toolStripMenuItem1
+            // 
+            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(32, 19);
+            // 
+            // toolStripMenuItem2
+            // 
+            this.toolStripMenuItem2.Name = "toolStripMenuItem2";
+            this.toolStripMenuItem2.Size = new System.Drawing.Size(32, 19);
+            // 
+            // toolStripMenuItem3
+            // 
+            this.toolStripMenuItem3.Name = "toolStripMenuItem3";
+            this.toolStripMenuItem3.Size = new System.Drawing.Size(32, 19);
+            // 
+            // toolStripMenuItem4
+            // 
+            this.toolStripMenuItem4.Name = "toolStripMenuItem4";
+            this.toolStripMenuItem4.Size = new System.Drawing.Size(32, 19);
+            // 
+            // toolStripMenuItem5
+            // 
+            this.toolStripMenuItem5.Name = "toolStripMenuItem5";
+            this.toolStripMenuItem5.Size = new System.Drawing.Size(32, 19);
+            // 
+            // toolStripMenuItem6
+            // 
+            this.toolStripMenuItem6.Name = "toolStripMenuItem6";
+            this.toolStripMenuItem6.Size = new System.Drawing.Size(32, 19);
+            // 
+            // toolStripMenuItem14
+            // 
+            this.toolStripMenuItem14.Name = "toolStripMenuItem14";
+            this.toolStripMenuItem14.Size = new System.Drawing.Size(32, 19);
+            // 
+            // dnsStatusBar
+            // 
+            this.dnsStatusBar.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripDropDownButton6,
+            this.toolStripStatusLabel5,
+            this.toolStripDropDownButton7});
+            this.dnsStatusBar.Location = new System.Drawing.Point(0, 589);
+            this.dnsStatusBar.Name = "dnsStatusBar";
+            this.dnsStatusBar.Size = new System.Drawing.Size(934, 22);
+            this.dnsStatusBar.TabIndex = 3;
+            this.dnsStatusBar.Text = "statusStrip1";
+            // 
+            // toolStripStatusLabel5
+            // 
+            this.toolStripStatusLabel5.Name = "toolStripStatusLabel5";
+            this.toolStripStatusLabel5.Size = new System.Drawing.Size(10, 17);
+            this.toolStripStatusLabel5.Text = "|";
+            // 
+            // toolStripDropDownButton6
+            // 
+            this.toolStripDropDownButton6.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.toolStripDropDownButton6.Image = ((System.Drawing.Image)(resources.GetObject("toolStripDropDownButton6.Image")));
+            this.toolStripDropDownButton6.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripDropDownButton6.Name = "toolStripDropDownButton6";
+            this.toolStripDropDownButton6.Size = new System.Drawing.Size(106, 20);
+            this.toolStripDropDownButton6.Text = "M. Niyazi ALPAY";
+            this.toolStripDropDownButton6.Click += new System.EventHandler(this.toolStripStatusLabel1_Click);
+            // 
+            // toolStripDropDownButton7
+            // 
+            this.toolStripDropDownButton7.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripMenuItem15,
+            this.toolStripMenuItem16,
+            this.toolStripMenuItem17,
+            this.toolStripMenuItem18,
+            this.toolStripMenuItem19,
+            this.toolStripMenuItem20,
+            this.toolStripMenuItem21});
+            this.toolStripDropDownButton7.Image = ((System.Drawing.Image)(resources.GetObject("toolStripDropDownButton7.Image")));
+            this.toolStripDropDownButton7.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripDropDownButton7.Name = "toolStripDropDownButton7";
+            this.toolStripDropDownButton7.Size = new System.Drawing.Size(90, 20);
+            this.toolStripDropDownButton7.Text = "&DNS Tools";
+            // 
+            // toolStripMenuItem15
+            // 
+            this.toolStripMenuItem15.Image = global::Cryptograph_Whois_DNS_Tools.Properties.Resources.a;
+            this.toolStripMenuItem15.Name = "toolStripMenuItem15";
+            this.toolStripMenuItem15.Size = new System.Drawing.Size(152, 22);
+            this.toolStripMenuItem15.Text = "&A";
+            this.toolStripMenuItem15.Click += new System.EventHandler(this.aToolStripMenuItem_Click);
+            // 
+            // toolStripMenuItem16
+            // 
+            this.toolStripMenuItem16.Image = global::Cryptograph_Whois_DNS_Tools.Properties.Resources.cname;
+            this.toolStripMenuItem16.Name = "toolStripMenuItem16";
+            this.toolStripMenuItem16.Size = new System.Drawing.Size(152, 22);
+            this.toolStripMenuItem16.Text = "&CNAME";
+            this.toolStripMenuItem16.Click += new System.EventHandler(this.cNAMEToolStripMenuItem_Click);
+            // 
+            // toolStripMenuItem17
+            // 
+            this.toolStripMenuItem17.Image = global::Cryptograph_Whois_DNS_Tools.Properties.Resources.http;
+            this.toolStripMenuItem17.Name = "toolStripMenuItem17";
+            this.toolStripMenuItem17.Size = new System.Drawing.Size(152, 22);
+            this.toolStripMenuItem17.Text = "&NS";
+            this.toolStripMenuItem17.Click += new System.EventHandler(this.nSToolStripMenuItem_Click);
+            // 
+            // toolStripMenuItem18
+            // 
+            this.toolStripMenuItem18.Image = global::Cryptograph_Whois_DNS_Tools.Properties.Resources.mx;
+            this.toolStripMenuItem18.Name = "toolStripMenuItem18";
+            this.toolStripMenuItem18.Size = new System.Drawing.Size(152, 22);
+            this.toolStripMenuItem18.Text = "&MX";
+            this.toolStripMenuItem18.Click += new System.EventHandler(this.mXToolStripMenuItem_Click);
+            // 
+            // toolStripMenuItem19
+            // 
+            this.toolStripMenuItem19.Image = global::Cryptograph_Whois_DNS_Tools.Properties.Resources.ptr;
+            this.toolStripMenuItem19.Name = "toolStripMenuItem19";
+            this.toolStripMenuItem19.Size = new System.Drawing.Size(152, 22);
+            this.toolStripMenuItem19.Text = "&PTR";
+            this.toolStripMenuItem19.Click += new System.EventHandler(this.pTRToolStripMenuItem_Click);
+            // 
+            // toolStripMenuItem20
+            // 
+            this.toolStripMenuItem20.Image = global::Cryptograph_Whois_DNS_Tools.Properties.Resources.txt;
+            this.toolStripMenuItem20.Name = "toolStripMenuItem20";
+            this.toolStripMenuItem20.Size = new System.Drawing.Size(152, 22);
+            this.toolStripMenuItem20.Text = "&TXT";
+            this.toolStripMenuItem20.Click += new System.EventHandler(this.tXTToolStripMenuItem_Click);
+            // 
+            // toolStripMenuItem21
+            // 
+            this.toolStripMenuItem21.Image = global::Cryptograph_Whois_DNS_Tools.Properties.Resources.soa;
+            this.toolStripMenuItem21.Name = "toolStripMenuItem21";
+            this.toolStripMenuItem21.Size = new System.Drawing.Size(152, 22);
+            this.toolStripMenuItem21.Text = "&SOA";
+            this.toolStripMenuItem21.Click += new System.EventHandler(this.sOAToolStripMenuItem_Click);
             // 
             // frmMain
             // 
@@ -551,7 +688,7 @@
             this.ClientSize = new System.Drawing.Size(934, 611);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.MinimumSize = new System.Drawing.Size(754, 572);
+            this.MinimumSize = new System.Drawing.Size(950, 650);
             this.Name = "frmMain";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Cryptograph Whois & DNS Tools";
@@ -559,8 +696,6 @@
             this.Load += new System.EventHandler(this.frmMain_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
-            this.statusStrip1.ResumeLayout(false);
-            this.statusStrip1.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.tableLayoutPanel2.ResumeLayout(false);
             this.tableLayoutPanel3.ResumeLayout(false);
@@ -570,6 +705,8 @@
             this.tabPage2.ResumeLayout(false);
             this.tableLayoutPanel5.ResumeLayout(false);
             this.tabPage3.ResumeLayout(false);
+            this.dnsStatusBar.ResumeLayout(false);
+            this.dnsStatusBar.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -577,7 +714,6 @@
         #endregion
 
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
-        private System.Windows.Forms.StatusStrip statusStrip1;
         private System.Windows.Forms.ToolStripDropDownButton toolStripDropDownButton1;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
@@ -621,6 +757,30 @@
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem13;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem12;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem11;
+        private System.Windows.Forms.ToolStripDropDownButton toolStripDropDownButton3;
+        private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel2;
+        private System.Windows.Forms.ToolStripDropDownButton toolStripDropDownButton4;
+        private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel3;
+        private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel4;
+        private System.Windows.Forms.ToolStripDropDownButton toolStripDropDownButton5;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem2;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem3;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem4;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem5;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem6;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem14;
+        private System.Windows.Forms.StatusStrip dnsStatusBar;
+        private System.Windows.Forms.ToolStripDropDownButton toolStripDropDownButton6;
+        private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel5;
+        private System.Windows.Forms.ToolStripDropDownButton toolStripDropDownButton7;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem15;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem16;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem17;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem18;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem19;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem20;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem21;
     }
 }
 

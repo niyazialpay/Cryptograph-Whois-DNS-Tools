@@ -54,14 +54,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Cryptograph Whois &amp; DNS Tools.exe" size="397784">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Cryptograph Whois &amp; DNS Tools.exe" size="305112">
       <assemblyIdentity name="Cryptograph Whois &amp; DNS Tools" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>pKhHDWQGxS2aQtVCB6hwOhcHbrQ=</dsig:DigestValue>
+        <dsig:DigestValue>w4aBDAnDjjQ2mfsHskAMIu7TPfo=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -105,6 +105,15 @@
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
       <dsig:DigestValue>piUCU5eMtovpZSSDrbJdcYVMrjA=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Resources\whois.png" size="15432">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>XL/cqwlV9owtr1rrLJxYqLPSkRQ=</dsig:DigestValue>
     </hash>
   </file>
   <compatibility xmlns="urn:schemas-microsoft-com:compatibility.v1">
