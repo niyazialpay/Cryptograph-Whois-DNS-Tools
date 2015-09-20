@@ -1,42 +1,16 @@
-C:\Users\MuhammedNiyazi\Documents\Visual Studio 2015\Projects\Cryptograph Whois Query\Cryptograph Whois Query\bin\Release\Cryptograph Whois & DNS Tools.exe.config
-C:\Users\MuhammedNiyazi\Documents\Visual Studio 2015\Projects\Cryptograph Whois Query\Cryptograph Whois Query\bin\Release\Cryptograph Whois & DNS Tools.exe.manifest
-C:\Users\MuhammedNiyazi\Documents\Visual Studio 2015\Projects\Cryptograph Whois Query\Cryptograph Whois Query\bin\Release\Cryptograph Whois & DNS Tools.application
-C:\Users\MuhammedNiyazi\Documents\Visual Studio 2015\Projects\Cryptograph Whois Query\Cryptograph Whois Query\bin\Release\Cryptograph Whois & DNS Tools.exe
-C:\Users\MuhammedNiyazi\Documents\Visual Studio 2015\Projects\Cryptograph Whois Query\Cryptograph Whois Query\bin\Release\Cryptograph Whois & DNS Tools.pdb
-C:\Users\MuhammedNiyazi\Documents\Visual Studio 2015\Projects\Cryptograph Whois Query\Cryptograph Whois Query\bin\Release\System.Net.Http.dll
-C:\Users\MuhammedNiyazi\Documents\Visual Studio 2015\Projects\Cryptograph Whois Query\Cryptograph Whois Query\bin\Release\System.Net.Http.xml
-C:\Users\MuhammedNiyazi\Documents\Visual Studio 2015\Projects\Cryptograph Whois Query\Cryptograph Whois Query\obj\Release\Cryptograph Whois - DNS Tools.csprojResolveAssemblyReference.cache
-C:\Users\MuhammedNiyazi\Documents\Visual Studio 2015\Projects\Cryptograph Whois Query\Cryptograph Whois Query\obj\Release\Cryptograph_Whois_DNS_Tools.frmDNS.resources
-C:\Users\MuhammedNiyazi\Documents\Visual Studio 2015\Projects\Cryptograph Whois Query\Cryptograph Whois Query\obj\Release\Cryptograph_Whois_DNS_Tools.frmIDN.resources
-C:\Users\MuhammedNiyazi\Documents\Visual Studio 2015\Projects\Cryptograph Whois Query\Cryptograph Whois Query\obj\Release\Cryptograph_Whois_DNS_Tools.frmMain.resources
-C:\Users\MuhammedNiyazi\Documents\Visual Studio 2015\Projects\Cryptograph Whois Query\Cryptograph Whois Query\obj\Release\Cryptograph_Whois_DNS_Tools.Properties.Resources.resources
-C:\Users\MuhammedNiyazi\Documents\Visual Studio 2015\Projects\Cryptograph Whois Query\Cryptograph Whois Query\obj\Release\Cryptograph Whois - DNS Tools.csproj.GenerateResource.Cache
-C:\Users\MuhammedNiyazi\Documents\Visual Studio 2015\Projects\Cryptograph Whois Query\Cryptograph Whois Query\obj\Release\Cryptograph Whois & DNS Tools.TrustInfo.xml
-C:\Users\MuhammedNiyazi\Documents\Visual Studio 2015\Projects\Cryptograph Whois Query\Cryptograph Whois Query\obj\Release\Cryptograph Whois & DNS Tools.exe.manifest
-C:\Users\MuhammedNiyazi\Documents\Visual Studio 2015\Projects\Cryptograph Whois Query\Cryptograph Whois Query\obj\Release\Cryptograph Whois & DNS Tools.application
-C:\Users\MuhammedNiyazi\Documents\Visual Studio 2015\Projects\Cryptograph Whois Query\Cryptograph Whois Query\obj\Release\Cryptograph Whois & DNS Tools.exe
-C:\Users\MuhammedNiyazi\Documents\Visual Studio 2015\Projects\Cryptograph Whois Query\Cryptograph Whois Query\obj\Release\Cryptograph Whois & DNS Tools.pdb
-C:\Users\MuhammedNiyazi\Documents\Visual Studio 2015\Projects\Cryptograph Whois Query\Cryptograph Whois Query\obj\Release\Cryptograph_Whois_DNS_Tools.frmA.resources
-C:\Users\MuhammedNiyazi\Documents\Visual Studio 2015\Projects\Cryptograph Whois Query\Cryptograph Whois Query\obj\Release\Cryptograph_Whois_DNS_Tools.frmCname.resources
-C:\Users\MuhammedNiyazi\Documents\Visual Studio 2015\Projects\Cryptograph Whois Query\Cryptograph Whois Query\obj\Release\Cryptograph_Whois_DNS_Tools.frmNS.resources
-C:\Users\MuhammedNiyazi\Documents\Visual Studio 2015\Projects\Cryptograph Whois Query\Cryptograph Whois Query\obj\Release\Cryptograph_Whois_DNS_Tools.frmMX.resources
-C:\Users\MuhammedNiyazi\Documents\Visual Studio 2015\Projects\Cryptograph Whois Query\Cryptograph Whois Query\obj\Release\Cryptograph_Whois_DNS_Tools.frmPTR.resources
-C:\Users\MuhammedNiyazi\Documents\Visual Studio 2015\Projects\Cryptograph Whois Query\Cryptograph Whois Query\obj\Release\Cryptograph_Whois_DNS_Tools.frmTXT.resources
 C:\Users\MuhammedNiyazi\Documents\GitHub\Cryptograph-Whois-DNS-Tools\Source\Cryptograph Whois Query\bin\Release\Cryptograph Whois & DNS Tools.exe.config
-C:\Users\MuhammedNiyazi\Documents\GitHub\Cryptograph-Whois-DNS-Tools\Source\Cryptograph Whois Query\obj\Release\Cryptograph Whois & DNS Tools.exe
-C:\Users\MuhammedNiyazi\Documents\GitHub\Cryptograph-Whois-DNS-Tools\Source\Cryptograph Whois Query\obj\Release\Cryptograph Whois & DNS Tools.pdb
 C:\Users\MuhammedNiyazi\Documents\GitHub\Cryptograph-Whois-DNS-Tools\Source\Cryptograph Whois Query\bin\Release\Cryptograph Whois & DNS Tools.exe.manifest
 C:\Users\MuhammedNiyazi\Documents\GitHub\Cryptograph-Whois-DNS-Tools\Source\Cryptograph Whois Query\bin\Release\Cryptograph Whois & DNS Tools.application
 C:\Users\MuhammedNiyazi\Documents\GitHub\Cryptograph-Whois-DNS-Tools\Source\Cryptograph Whois Query\bin\Release\Cryptograph Whois & DNS Tools.exe
 C:\Users\MuhammedNiyazi\Documents\GitHub\Cryptograph-Whois-DNS-Tools\Source\Cryptograph Whois Query\bin\Release\Cryptograph Whois & DNS Tools.pdb
 C:\Users\MuhammedNiyazi\Documents\GitHub\Cryptograph-Whois-DNS-Tools\Source\Cryptograph Whois Query\bin\Release\System.Net.Http.dll
 C:\Users\MuhammedNiyazi\Documents\GitHub\Cryptograph-Whois-DNS-Tools\Source\Cryptograph Whois Query\bin\Release\System.Net.Http.xml
-C:\Users\MuhammedNiyazi\Documents\GitHub\Cryptograph-Whois-DNS-Tools\Source\Cryptograph Whois Query\obj\Release\Cryptograph Whois - DNS Tools.csprojResolveAssemblyReference.cache
 C:\Users\MuhammedNiyazi\Documents\GitHub\Cryptograph-Whois-DNS-Tools\Source\Cryptograph Whois Query\obj\Release\Cryptograph_Whois_DNS_Tools.frmA.resources
 C:\Users\MuhammedNiyazi\Documents\GitHub\Cryptograph-Whois-DNS-Tools\Source\Cryptograph Whois Query\obj\Release\Cryptograph_Whois_DNS_Tools.frmCname.resources
 C:\Users\MuhammedNiyazi\Documents\GitHub\Cryptograph-Whois-DNS-Tools\Source\Cryptograph Whois Query\obj\Release\Cryptograph_Whois_DNS_Tools.frmMain.resources
 C:\Users\MuhammedNiyazi\Documents\GitHub\Cryptograph-Whois-DNS-Tools\Source\Cryptograph Whois Query\obj\Release\Cryptograph_Whois_DNS_Tools.frmNS.resources
 C:\Users\MuhammedNiyazi\Documents\GitHub\Cryptograph-Whois-DNS-Tools\Source\Cryptograph Whois Query\obj\Release\Cryptograph_Whois_DNS_Tools.frmPTR.resources
+C:\Users\MuhammedNiyazi\Documents\GitHub\Cryptograph-Whois-DNS-Tools\Source\Cryptograph Whois Query\obj\Release\Cryptograph_Whois_DNS_Tools.frmSOA.resources
 C:\Users\MuhammedNiyazi\Documents\GitHub\Cryptograph-Whois-DNS-Tools\Source\Cryptograph Whois Query\obj\Release\Cryptograph_Whois_DNS_Tools.frmTXT.resources
 C:\Users\MuhammedNiyazi\Documents\GitHub\Cryptograph-Whois-DNS-Tools\Source\Cryptograph Whois Query\obj\Release\Cryptograph_Whois_DNS_Tools.frmMX.resources
 C:\Users\MuhammedNiyazi\Documents\GitHub\Cryptograph-Whois-DNS-Tools\Source\Cryptograph Whois Query\obj\Release\Cryptograph_Whois_DNS_Tools.Properties.Resources.resources
@@ -44,4 +18,5 @@ C:\Users\MuhammedNiyazi\Documents\GitHub\Cryptograph-Whois-DNS-Tools\Source\Cryp
 C:\Users\MuhammedNiyazi\Documents\GitHub\Cryptograph-Whois-DNS-Tools\Source\Cryptograph Whois Query\obj\Release\Cryptograph Whois & DNS Tools.TrustInfo.xml
 C:\Users\MuhammedNiyazi\Documents\GitHub\Cryptograph-Whois-DNS-Tools\Source\Cryptograph Whois Query\obj\Release\Cryptograph Whois & DNS Tools.exe.manifest
 C:\Users\MuhammedNiyazi\Documents\GitHub\Cryptograph-Whois-DNS-Tools\Source\Cryptograph Whois Query\obj\Release\Cryptograph Whois & DNS Tools.application
-C:\Users\MuhammedNiyazi\Documents\GitHub\Cryptograph-Whois-DNS-Tools\Source\Cryptograph Whois Query\obj\Release\Cryptograph_Whois_DNS_Tools.frmSOA.resources
+C:\Users\MuhammedNiyazi\Documents\GitHub\Cryptograph-Whois-DNS-Tools\Source\Cryptograph Whois Query\obj\Release\Cryptograph Whois & DNS Tools.exe
+C:\Users\MuhammedNiyazi\Documents\GitHub\Cryptograph-Whois-DNS-Tools\Source\Cryptograph Whois Query\obj\Release\Cryptograph Whois & DNS Tools.pdb
