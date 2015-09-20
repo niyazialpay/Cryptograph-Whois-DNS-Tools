@@ -335,5 +335,25 @@ namespace Cryptograph_Whois_DNS_Tools
                 MessageBox.Show("Start of Authority Record Records window already open", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
+
+        private void listviewDoubleClick(object sender, EventArgs e)
+        {
+            MessageBox.Show(listView1.SelectedItems[0].SubItems[1].Text + " - copied to clipboard", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            Clipboard.SetText(listView1.SelectedItems[0].SubItems[1].Text);
+        }
+
+        private void clearToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            listView1.Items.Clear();
+            listView2.Items.Clear();
+            listView3.Items.Clear();
+            listView4.Items.Clear();
+            listView5.Items.Clear();
+            listView6.Items.Clear();
+            listView7.Items.Clear();
+            idnListView.Items.Clear();
+            txtUrl.Clear();
+            webBrowser1.DocumentText = "";
+        }
     }
 }
