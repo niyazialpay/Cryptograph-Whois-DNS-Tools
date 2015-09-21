@@ -502,12 +502,12 @@
             // domain
             // 
             this.domain.Text = "Domain";
-            this.domain.Width = 430;
+            this.domain.Width = 400;
             // 
             // idndomain
             // 
             this.idndomain.Text = "IDN";
-            this.idndomain.Width = 430;
+            this.idndomain.Width = 400;
             // 
             // dnsStatusBar
             // 
