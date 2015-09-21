@@ -54,26 +54,26 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Cryptograph Whois &amp; DNS Tools.exe" size="306136">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Cryptograph Whois &amp; DNS Tools.exe" size="325080">
       <assemblyIdentity name="Cryptograph Whois &amp; DNS Tools" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>LTr920XNXtGQ2mxshD7slA1N/IY=</dsig:DigestValue>
+        <dsig:DigestValue>ELSIrc3bxUO10sRTePCwkAEiOfI=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="DNS.dll" size="43008">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="DNS.dll" size="43520">
       <assemblyIdentity name="DNS" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>gBOxq/VgE7j+Kehnx8dtaLY4E5M=</dsig:DigestValue>
+        <dsig:DigestValue>FYwZVASdXTOHUDp0R+fnGfYPS+s=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

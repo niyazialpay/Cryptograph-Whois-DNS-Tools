@@ -2,7 +2,6 @@
 using System.Windows.Forms;
 using System.Globalization;
 using System.Threading;
-using System.ComponentModel;
 
 namespace Cryptograph_Whois_DNS_Tools
 {
@@ -152,11 +151,17 @@ namespace Cryptograph_Whois_DNS_Tools
                 }
 
                 //txt records
-                this.listView7.Items.Clear();
+                this.soalistview.Items.Clear();
 
                 foreach (string txtitem in dns.TxtRecords(txtUrl.Text))
                 {
-                    listView7.Items.Add(txtitem);
+                    soalistview.Items.Add(txtitem);
+                }
+
+                soalistview.Items.Clear();
+                foreach (string soaitem in dns.SOARecord(txtUrl.Text))
+                {
+                    soalistview.Items.Add(soaitem);
                 }
 
                 //mx records
@@ -332,7 +337,22 @@ namespace Cryptograph_Whois_DNS_Tools
             else
             {
                 //frm.WindowState = WindowState;
-                MessageBox.Show("Start of Authority Record Records window already open", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Start of Authority Record window already open", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
+
+        private void sRVToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmSRV frm = new frmSRV();
+            if (Application.OpenForms["frmSRV"] == null)
+            {
+                frm.Name = "frmSRV";
+                frm.Show();
+            }
+            else
+            {
+                //frm.WindowState = WindowState;
+                MessageBox.Show("Service Record window already open", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
 
@@ -350,10 +370,11 @@ namespace Cryptograph_Whois_DNS_Tools
             listView4.Items.Clear();
             listView5.Items.Clear();
             listView6.Items.Clear();
-            listView7.Items.Clear();
+            soalistview.Items.Clear();
             idnListView.Items.Clear();
             txtUrl.Clear();
             webBrowser1.DocumentText = "";
         }
+
     }
 }

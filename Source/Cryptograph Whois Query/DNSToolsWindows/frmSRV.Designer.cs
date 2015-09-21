@@ -1,6 +1,6 @@
 ﻿namespace Cryptograph_Whois_DNS_Tools
 {
-    partial class frmA
+    partial class frmSRV
     {
         /// <summary>
         /// Required designer variable.
@@ -29,35 +29,16 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmA));
-            this.btnQuery = new System.Windows.Forms.Button();
-            this.txtUrl = new System.Windows.Forms.TextBox();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmSRV));
             this.listView1 = new System.Windows.Forms.ListView();
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.txtUrl = new System.Windows.Forms.TextBox();
+            this.btnQuery = new System.Windows.Forms.Button();
             this.clearToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // btnQuery
-            // 
-            this.btnQuery.Location = new System.Drawing.Point(467, 10);
-            this.btnQuery.Margin = new System.Windows.Forms.Padding(2);
-            this.btnQuery.Name = "btnQuery";
-            this.btnQuery.Size = new System.Drawing.Size(56, 19);
-            this.btnQuery.TabIndex = 0;
-            this.btnQuery.Text = "Query";
-            this.btnQuery.UseVisualStyleBackColor = true;
-            this.btnQuery.Click += new System.EventHandler(this.btnQuery_Click);
-            // 
-            // txtUrl
-            // 
-            this.txtUrl.Location = new System.Drawing.Point(9, 10);
-            this.txtUrl.Margin = new System.Windows.Forms.Padding(2);
-            this.txtUrl.Name = "txtUrl";
-            this.txtUrl.Size = new System.Drawing.Size(454, 20);
-            this.txtUrl.TabIndex = 1;
             // 
             // listView1
             // 
@@ -68,11 +49,11 @@
             this.listView1.FullRowSelect = true;
             this.listView1.GridLines = true;
             this.listView1.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.None;
-            this.listView1.Location = new System.Drawing.Point(9, 34);
+            this.listView1.Location = new System.Drawing.Point(10, 34);
             this.listView1.Margin = new System.Windows.Forms.Padding(2);
             this.listView1.Name = "listView1";
             this.listView1.Size = new System.Drawing.Size(514, 266);
-            this.listView1.TabIndex = 2;
+            this.listView1.TabIndex = 5;
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.View = System.Windows.Forms.View.Details;
             this.listView1.DoubleClick += new System.EventHandler(this.listView1_DoubleClick);
@@ -92,6 +73,26 @@
             this.clearToolStripMenuItem});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
             this.contextMenuStrip1.Size = new System.Drawing.Size(102, 26);
+            this.contextMenuStrip1.Click += new System.EventHandler(this.clearToolStripMenuItem_Click);
+            // 
+            // txtUrl
+            // 
+            this.txtUrl.Location = new System.Drawing.Point(10, 10);
+            this.txtUrl.Margin = new System.Windows.Forms.Padding(2);
+            this.txtUrl.Name = "txtUrl";
+            this.txtUrl.Size = new System.Drawing.Size(454, 20);
+            this.txtUrl.TabIndex = 4;
+            // 
+            // btnQuery
+            // 
+            this.btnQuery.Location = new System.Drawing.Point(468, 10);
+            this.btnQuery.Margin = new System.Windows.Forms.Padding(2);
+            this.btnQuery.Name = "btnQuery";
+            this.btnQuery.Size = new System.Drawing.Size(56, 19);
+            this.btnQuery.TabIndex = 3;
+            this.btnQuery.Text = "Query";
+            this.btnQuery.UseVisualStyleBackColor = true;
+            this.btnQuery.Click += new System.EventHandler(this.btnQuery_Click);
             // 
             // clearToolStripMenuItem
             // 
@@ -99,28 +100,25 @@
             this.clearToolStripMenuItem.Name = "clearToolStripMenuItem";
             this.clearToolStripMenuItem.Size = new System.Drawing.Size(101, 22);
             this.clearToolStripMenuItem.Text = "&Clear";
-            this.clearToolStripMenuItem.Click += new System.EventHandler(this.clearToolStripMenuItem_Click);
             // 
-            // frmA
+            // frmSRV
             // 
             this.AcceptButton = this.btnQuery;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(534, 311);
-            this.ContextMenuStrip = this.contextMenuStrip1;
             this.Controls.Add(this.listView1);
             this.Controls.Add(this.txtUrl);
             this.Controls.Add(this.btnQuery);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(550, 350);
             this.MinimizeBox = false;
             this.MinimumSize = new System.Drawing.Size(550, 350);
-            this.Name = "frmA";
+            this.Name = "frmSRV";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Address Record";
+            this.Text = "Service Record";
             this.Load += new System.EventHandler(this.frmA_Load);
             this.contextMenuStrip1.ResumeLayout(false);
             this.ResumeLayout(false);
@@ -130,12 +128,12 @@
 
         #endregion
 
-        private System.Windows.Forms.Button btnQuery;
-        private System.Windows.Forms.TextBox txtUrl;
         private System.Windows.Forms.ListView listView1;
         private System.Windows.Forms.ColumnHeader columnHeader1;
         private System.Windows.Forms.ColumnHeader columnHeader2;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.ToolStripMenuItem clearToolStripMenuItem;
+        private System.Windows.Forms.TextBox txtUrl;
+        private System.Windows.Forms.Button btnQuery;
     }
 }

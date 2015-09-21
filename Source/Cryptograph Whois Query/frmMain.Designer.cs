@@ -33,6 +33,8 @@
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.clearToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.txtUrl = new System.Windows.Forms.TextBox();
             this.btnQuery = new System.Windows.Forms.Button();
@@ -41,7 +43,9 @@
             this.webBrowser1 = new System.Windows.Forms.WebBrowser();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
-            this.listView7 = new System.Windows.Forms.ListView();
+            this.listView8 = new System.Windows.Forms.ListView();
+            this.columnHeader12 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.soalistview = new System.Windows.Forms.ListView();
             this.columnHeader10 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.listView6 = new System.Windows.Forms.ListView();
             this.columnHeader11 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -74,6 +78,7 @@
             this.toolStripMenuItem19 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem20 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem21 = new System.Windows.Forms.ToolStripMenuItem();
+            this.sRVToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripDropDownButton1 = new System.Windows.Forms.ToolStripDropDownButton();
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolStripDropDownButton2 = new System.Windows.Forms.ToolStripDropDownButton();
@@ -98,11 +103,10 @@
             this.toolStripMenuItem5 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem6 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem14 = new System.Windows.Forms.ToolStripMenuItem();
-            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.clearToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
+            this.contextMenuStrip1.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -110,7 +114,6 @@
             this.tableLayoutPanel5.SuspendLayout();
             this.tabPage3.SuspendLayout();
             this.dnsStatusBar.SuspendLayout();
-            this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -159,6 +162,21 @@
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel2.Size = new System.Drawing.Size(928, 582);
             this.tableLayoutPanel2.TabIndex = 0;
+            // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.clearToolStripMenuItem});
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(102, 26);
+            // 
+            // clearToolStripMenuItem
+            // 
+            this.clearToolStripMenuItem.Image = global::Cryptograph_Whois_DNS_Tools.Properties.Resources.edit_clear;
+            this.clearToolStripMenuItem.Name = "clearToolStripMenuItem";
+            this.clearToolStripMenuItem.Size = new System.Drawing.Size(101, 22);
+            this.clearToolStripMenuItem.Text = "&Clear";
+            this.clearToolStripMenuItem.Click += new System.EventHandler(this.clearToolStripMenuItem_Click);
             // 
             // tableLayoutPanel3
             // 
@@ -248,7 +266,8 @@
             this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel5.ContextMenuStrip = this.contextMenuStrip1;
-            this.tableLayoutPanel5.Controls.Add(this.listView7, 0, 3);
+            this.tableLayoutPanel5.Controls.Add(this.listView8, 0, 3);
+            this.tableLayoutPanel5.Controls.Add(this.soalistview, 0, 3);
             this.tableLayoutPanel5.Controls.Add(this.listView6, 0, 2);
             this.tableLayoutPanel5.Controls.Add(this.listView5, 0, 2);
             this.tableLayoutPanel5.Controls.Add(this.listView4, 0, 1);
@@ -267,25 +286,46 @@
             this.tableLayoutPanel5.Size = new System.Drawing.Size(908, 510);
             this.tableLayoutPanel5.TabIndex = 4;
             // 
-            // listView7
+            // listView8
             // 
-            this.listView7.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.listView8.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader12});
+            this.listView8.ContextMenuStrip = this.contextMenuStrip1;
+            this.listView8.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.listView8.FullRowSelect = true;
+            this.listView8.GridLines = true;
+            this.listView8.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
+            this.listView8.Location = new System.Drawing.Point(3, 384);
+            this.listView8.Name = "listView8";
+            this.listView8.Size = new System.Drawing.Size(448, 123);
+            this.listView8.TabIndex = 7;
+            this.listView8.UseCompatibleStateImageBehavior = false;
+            this.listView8.View = System.Windows.Forms.View.Details;
+            // 
+            // columnHeader12
+            // 
+            this.columnHeader12.Text = "TXT Records";
+            this.columnHeader12.Width = 400;
+            // 
+            // soalistview
+            // 
+            this.soalistview.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader10});
-            this.listView7.ContextMenuStrip = this.contextMenuStrip1;
-            this.listView7.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.listView7.FullRowSelect = true;
-            this.listView7.GridLines = true;
-            this.listView7.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
-            this.listView7.Location = new System.Drawing.Point(3, 384);
-            this.listView7.Name = "listView7";
-            this.listView7.Size = new System.Drawing.Size(448, 123);
-            this.listView7.TabIndex = 6;
-            this.listView7.UseCompatibleStateImageBehavior = false;
-            this.listView7.View = System.Windows.Forms.View.Details;
+            this.soalistview.ContextMenuStrip = this.contextMenuStrip1;
+            this.soalistview.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.soalistview.FullRowSelect = true;
+            this.soalistview.GridLines = true;
+            this.soalistview.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
+            this.soalistview.Location = new System.Drawing.Point(457, 384);
+            this.soalistview.Name = "soalistview";
+            this.soalistview.Size = new System.Drawing.Size(448, 123);
+            this.soalistview.TabIndex = 6;
+            this.soalistview.UseCompatibleStateImageBehavior = false;
+            this.soalistview.View = System.Windows.Forms.View.Details;
             // 
             // columnHeader10
             // 
-            this.columnHeader10.Text = "TXT Records";
+            this.columnHeader10.Text = "SOA Record";
             this.columnHeader10.Width = 400;
             // 
             // listView6
@@ -340,7 +380,7 @@
             this.listView4.FullRowSelect = true;
             this.listView4.GridLines = true;
             this.listView4.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
-            this.listView4.Location = new System.Drawing.Point(457, 130);
+            this.listView4.Location = new System.Drawing.Point(3, 130);
             this.listView4.Name = "listView4";
             this.listView4.Size = new System.Drawing.Size(448, 121);
             this.listView4.TabIndex = 3;
@@ -368,7 +408,7 @@
             this.listView3.GridLines = true;
             this.listView3.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
             this.listView3.LabelWrap = false;
-            this.listView3.Location = new System.Drawing.Point(3, 130);
+            this.listView3.Location = new System.Drawing.Point(457, 130);
             this.listView3.Name = "listView3";
             this.listView3.Size = new System.Drawing.Size(448, 121);
             this.listView3.TabIndex = 2;
@@ -516,7 +556,8 @@
             this.toolStripMenuItem18,
             this.toolStripMenuItem19,
             this.toolStripMenuItem20,
-            this.toolStripMenuItem21});
+            this.toolStripMenuItem21,
+            this.sRVToolStripMenuItem});
             this.toolStripDropDownButton7.Image = ((System.Drawing.Image)(resources.GetObject("toolStripDropDownButton7.Image")));
             this.toolStripDropDownButton7.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripDropDownButton7.Name = "toolStripDropDownButton7";
@@ -578,6 +619,14 @@
             this.toolStripMenuItem21.Size = new System.Drawing.Size(116, 22);
             this.toolStripMenuItem21.Text = "&SOA";
             this.toolStripMenuItem21.Click += new System.EventHandler(this.sOAToolStripMenuItem_Click);
+            // 
+            // sRVToolStripMenuItem
+            // 
+            this.sRVToolStripMenuItem.Image = global::Cryptograph_Whois_DNS_Tools.Properties.Resources.srv;
+            this.sRVToolStripMenuItem.Name = "sRVToolStripMenuItem";
+            this.sRVToolStripMenuItem.Size = new System.Drawing.Size(116, 22);
+            this.sRVToolStripMenuItem.Text = "S&RV";
+            this.sRVToolStripMenuItem.Click += new System.EventHandler(this.sRVToolStripMenuItem_Click);
             // 
             // toolStripDropDownButton1
             // 
@@ -699,21 +748,6 @@
             this.toolStripMenuItem14.Name = "toolStripMenuItem14";
             this.toolStripMenuItem14.Size = new System.Drawing.Size(32, 19);
             // 
-            // contextMenuStrip1
-            // 
-            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.clearToolStripMenuItem});
-            this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(153, 48);
-            // 
-            // clearToolStripMenuItem
-            // 
-            this.clearToolStripMenuItem.Image = global::Cryptograph_Whois_DNS_Tools.Properties.Resources.edit_clear;
-            this.clearToolStripMenuItem.Name = "clearToolStripMenuItem";
-            this.clearToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.clearToolStripMenuItem.Text = "&Clear";
-            this.clearToolStripMenuItem.Click += new System.EventHandler(this.clearToolStripMenuItem_Click);
-            // 
             // frmMain
             // 
             this.AcceptButton = this.btnQuery;
@@ -733,6 +767,7 @@
             this.tableLayoutPanel1.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.tableLayoutPanel2.ResumeLayout(false);
+            this.contextMenuStrip1.ResumeLayout(false);
             this.tableLayoutPanel3.ResumeLayout(false);
             this.tableLayoutPanel3.PerformLayout();
             this.tabControl1.ResumeLayout(false);
@@ -742,7 +777,6 @@
             this.tabPage3.ResumeLayout(false);
             this.dnsStatusBar.ResumeLayout(false);
             this.dnsStatusBar.PerformLayout();
-            this.contextMenuStrip1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -762,7 +796,7 @@
         private System.Windows.Forms.WebBrowser webBrowser1;
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel5;
-        public System.Windows.Forms.ListView listView7;
+        public System.Windows.Forms.ListView soalistview;
         private System.Windows.Forms.ColumnHeader columnHeader10;
         public System.Windows.Forms.ListView listView6;
         private System.Windows.Forms.ColumnHeader columnHeader11;
@@ -819,6 +853,9 @@
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem21;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.ToolStripMenuItem clearToolStripMenuItem;
+        public System.Windows.Forms.ListView listView8;
+        private System.Windows.Forms.ColumnHeader columnHeader12;
+        private System.Windows.Forms.ToolStripMenuItem sRVToolStripMenuItem;
     }
 }
 

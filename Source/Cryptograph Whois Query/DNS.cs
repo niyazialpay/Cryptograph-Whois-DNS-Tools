@@ -36,6 +36,22 @@ namespace Cryptograph_Whois_DNS_Tools
             return records;
         }
 
+        public IList<string> srvRecords(string name)
+        {
+            IList<string> records = new List<string>();
+            const QType qType = QType.SRV;
+            const QClass qClass = QClass.IN;
+
+            Response response = _resolver.Query(name, qType, qClass);
+
+            foreach (RecordSRV record in response.RecordsSRV)
+            {
+                records.Add(record.ToString());
+            }
+
+            return records;
+        }
+
         public IList<string> ARecords(string name)
         {
             IList<string> records = new List<string>();
