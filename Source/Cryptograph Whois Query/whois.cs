@@ -7,7 +7,6 @@ using System;
 using System.Text;
 using System.Net.Sockets;
 using System.IO;
-using System.Text.RegularExpressions;
 
 namespace Cryptograph_Whois_DNS_Tools
 {
@@ -773,7 +772,7 @@ namespace Cryptograph_Whois_DNS_Tools
                 Stream objStream = TCPC.GetStream();
                 objStream.Write(arrDomain, 0, strDomain.Length);
                 StreamReader objSR = new StreamReader(TCPC.GetStream(), Encoding.ASCII);
-                string icerik = Regex.Replace(objSR.ReadToEnd(), "\n", "<br>");
+                string icerik = objSR.ReadToEnd();//Regex.Replace(objSR.ReadToEnd(), "\n", "<br>");
                 TCPC.Close();
                 return icerik;
             }

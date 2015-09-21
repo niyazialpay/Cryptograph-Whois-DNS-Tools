@@ -68,7 +68,8 @@ namespace Cryptograph_Whois_DNS_Tools
         {
             try
             {
-                this.listView1.Items.Clear();
+                //a record
+                this.aRecordView.Items.Clear();
                 foreach (string aitem in dns.ARecords(txtUrl.Text))
                 {
                     ListViewItem lvi = new ListViewItem();
@@ -79,8 +80,8 @@ namespace Cryptograph_Whois_DNS_Tools
                         try
                         {
                             //a ptr records
-                            this.listView5.Items.Clear();
-                            listView5.Items.Add(dns.PTRRecord(aitem));
+                            this.aPTRview.Items.Clear();
+                            aPTRview.Items.Add(dns.PTRRecord(aitem));
 
                             foreach (string wwwAitem in dns.ARecords("www." + txtUrl.Text))
                             {
@@ -91,30 +92,31 @@ namespace Cryptograph_Whois_DNS_Tools
                                 else lvi.SubItems.Add(wwwAitem);
                             }
 
-                            listView1.Items.Add(lvi);
+                            aRecordView.Items.Add(lvi);
                         }
                         catch (FormatException ex)
                         {
                             //listView5.Items.Add("FormatException caught!!!");
                             //listView5.Items.Add("Source : " + ex.Source);
-                            listView5.Items.Add(ex.Message);
+                            aPTRview.Items.Add(ex.Message);
                         }
                         catch (ArgumentNullException ex)
                         {
                             //listView5.Items.Add("ArgumentNullException caught!!!");
                             //listView5.Items.Add("Source : " + ex.Source);
-                            listView5.Items.Add(ex.Message);
+                            aPTRview.Items.Add(ex.Message);
                         }
                         catch (Exception ex)
                         {
                             //listView5.Items.Add("Exception caught!!!");
                             //listView5.Items.Add("Source : " + ex.Source);
-                            listView5.Items.Add(ex.Message);
+                            aPTRview.Items.Add(ex.Message);
                         }
                     }
                 }
 
-                this.listView2.Items.Clear();
+                //cname record
+                this.cnameRecordView.Items.Clear();
 
                 foreach (string cnameitem in dns.CnameRecord(txtUrl.Text))
                 {
@@ -124,20 +126,16 @@ namespace Cryptograph_Whois_DNS_Tools
 
                     foreach (string wwwcnameitem in dns.CnameRecord("www." + txtUrl.Text))
                     {
-                        if (String.IsNullOrEmpty(wwwcnameitem))
-                        {
-                            lvicname.SubItems.Add("-");
-                        }
-                        else lvicname.SubItems.Add(wwwcnameitem);
+                        lvicname.SubItems.Add(wwwcnameitem);
                     }
 
-                    listView2.Items.Add(lvicname);
+                    cnameRecordView.Items.Add(lvicname);
                 }
 
 
 
                 //ns records
-                this.listView4.Items.Clear();
+                this.nsRecordView.Items.Clear();
 
                 foreach (string nsitem in dns.NSRecords(txtUrl.Text))
                 {
@@ -147,25 +145,26 @@ namespace Cryptograph_Whois_DNS_Tools
                     {
                         lvins.SubItems.Add(nsaitem);
                     }
-                    listView4.Items.Add(lvins);
+                    nsRecordView.Items.Add(lvins);
                 }
 
                 //txt records
-                this.soalistview.Items.Clear();
+                this.soaView.Items.Clear();
 
                 foreach (string txtitem in dns.TxtRecords(txtUrl.Text))
                 {
-                    soalistview.Items.Add(txtitem);
+                    soaView.Items.Add(txtitem);
                 }
-
-                soalistview.Items.Clear();
+                
+                //soa record
+                soaView.Items.Clear();
                 foreach (string soaitem in dns.SOARecord(txtUrl.Text))
                 {
-                    soalistview.Items.Add(soaitem);
+                    soaView.Items.Add(soaitem);
                 }
 
                 //mx records
-                this.listView3.Items.Clear();
+                this.mxRecordView.Items.Clear();
 
                 foreach (string mxitem in dns.MXRecords(txtUrl.Text))
                 {
@@ -177,27 +176,27 @@ namespace Cryptograph_Whois_DNS_Tools
                         //mx ptr records
                         try
                         {
-                            this.listView6.Items.Clear();
+                            this.mxPTRview.Items.Clear();
 
-                            listView6.Items.Add(dns.PTRRecord(mxaitem));
+                            mxPTRview.Items.Add(dns.PTRRecord(mxaitem));
                         }
                         catch (FormatException ex)
                         {
                             //listView6.Items.Add("FormatException caught!!!");
                             //listView6.Items.Add("Source : " + ex.Source);
-                            listView6.Items.Add(ex.Message);
+                            mxPTRview.Items.Add(ex.Message);
                         }
                         catch (ArgumentNullException ex)
                         {
                             //listView6.Items.Add("ArgumentNullException caught!!!");
                             //listView6.Items.Add("Source : " + ex.Source);
-                            listView6.Items.Add(ex.Message);
+                            mxPTRview.Items.Add(ex.Message);
                         }
                         catch (Exception ex)
                         {
                             //listView6.Items.Add("Exception caught!!!");
                             //listView6.Items.Add("Source : " + ex.Source);
-                            listView6.Items.Add(ex.Message);
+                            mxPTRview.Items.Add(ex.Message);
                         }
                     }
                 }
@@ -211,23 +210,12 @@ namespace Cryptograph_Whois_DNS_Tools
         private void whoisfunction()
         {
             whois whois = new whois();
-            webBrowser1.DocumentText = whois.query(txtUrl.Text);
+            whoisTextBox.Text = whois.query(txtUrl.Text);
         }
 
         private void toolStripStatusLabel1_Click(object sender, EventArgs e)
         {
             System.Diagnostics.Process.Start("https://niyazialpay.com");
-        }
-
-        private void whoisToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            //panelWebbrowser.Visible = true;
-            //panelDNS.Visible = false;
-        }
-
-        private void dNSToolsToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            tabPage2.Enabled = true;
         }
 
         private void frmMain_FormClosing(object sender, FormClosingEventArgs e)
@@ -237,7 +225,6 @@ namespace Cryptograph_Whois_DNS_Tools
 
         private void aToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            //frmA form = new frmA();
             frmA frm = new frmA();
             if (Application.OpenForms["frmA"] == null)
             {
@@ -246,7 +233,6 @@ namespace Cryptograph_Whois_DNS_Tools
             }
             else
             {
-                //frm.WindowState = WindowState;
                 MessageBox.Show("Address Record window already open", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
@@ -261,7 +247,6 @@ namespace Cryptograph_Whois_DNS_Tools
             }
             else
             {
-                //frm.WindowState = WindowState;
                 MessageBox.Show("Canonical Name Record window already open", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
@@ -276,7 +261,6 @@ namespace Cryptograph_Whois_DNS_Tools
             }
             else
             {
-                //frm.WindowState = WindowState;
                 MessageBox.Show("Name Server Records window already open", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
@@ -291,7 +275,6 @@ namespace Cryptograph_Whois_DNS_Tools
             }
             else
             {
-                //frm.WindowState = WindowState;
                 MessageBox.Show("Mail Exchanger Records window already open", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
@@ -306,7 +289,6 @@ namespace Cryptograph_Whois_DNS_Tools
             }
             else
             {
-                //frm.WindowState = WindowState;
                 MessageBox.Show("Reverse DNS Pointer Record window already open", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
@@ -321,7 +303,6 @@ namespace Cryptograph_Whois_DNS_Tools
             }
             else
             {
-                //frm.WindowState = WindowState;
                 MessageBox.Show("TXT Records window already open", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
@@ -336,7 +317,6 @@ namespace Cryptograph_Whois_DNS_Tools
             }
             else
             {
-                //frm.WindowState = WindowState;
                 MessageBox.Show("Start of Authority Record window already open", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
@@ -351,29 +331,33 @@ namespace Cryptograph_Whois_DNS_Tools
             }
             else
             {
-                //frm.WindowState = WindowState;
                 MessageBox.Show("Service Record window already open", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
 
         private void listviewDoubleClick(object sender, EventArgs e)
         {
-            MessageBox.Show(listView1.SelectedItems[0].SubItems[1].Text + " - copied to clipboard", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            Clipboard.SetText(listView1.SelectedItems[0].SubItems[1].Text);
+            MessageBox.Show(aRecordView.SelectedItems[0].SubItems[1].Text + " - copied to clipboard", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            Clipboard.SetText(aRecordView.SelectedItems[0].SubItems[1].Text);
+        }
+
+        private void whoisTextBox_LinkClicked(object sender, LinkClickedEventArgs e)
+        {
+            System.Diagnostics.Process.Start(e.LinkText);
         }
 
         private void clearToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            listView1.Items.Clear();
-            listView2.Items.Clear();
-            listView3.Items.Clear();
-            listView4.Items.Clear();
-            listView5.Items.Clear();
-            listView6.Items.Clear();
-            soalistview.Items.Clear();
+            aRecordView.Items.Clear();
+            cnameRecordView.Items.Clear();
+            mxRecordView.Items.Clear();
+            nsRecordView.Items.Clear();
+            aPTRview.Items.Clear();
+            mxPTRview.Items.Clear();
+            soaView.Items.Clear();
             idnListView.Items.Clear();
             txtUrl.Clear();
-            webBrowser1.DocumentText = "";
+            whoisTextBox.Clear();
         }
 
     }
