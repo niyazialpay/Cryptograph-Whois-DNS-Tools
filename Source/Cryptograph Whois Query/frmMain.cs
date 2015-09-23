@@ -223,6 +223,11 @@ namespace Cryptograph_Whois_DNS_Tools
             Application.Exit();
         }
 
+        private void frmMain_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
+        }
+
         private void aToolStripMenuItem_Click(object sender, EventArgs e)
         {
             frmA frm = new frmA();
@@ -360,5 +365,9 @@ namespace Cryptograph_Whois_DNS_Tools
             whoisTextBox.Clear();
         }
 
+        private void toolStripSplitButton1_Click(object sender, EventArgs e)
+        {
+            new frmSettings().ShowDialog();
+        }
     }
 }

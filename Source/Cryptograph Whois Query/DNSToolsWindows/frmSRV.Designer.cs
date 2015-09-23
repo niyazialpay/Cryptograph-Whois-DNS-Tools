@@ -34,9 +34,9 @@
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.clearToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.txtUrl = new System.Windows.Forms.TextBox();
             this.btnQuery = new System.Windows.Forms.Button();
-            this.clearToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -75,6 +75,13 @@
             this.contextMenuStrip1.Size = new System.Drawing.Size(102, 26);
             this.contextMenuStrip1.Click += new System.EventHandler(this.clearToolStripMenuItem_Click);
             // 
+            // clearToolStripMenuItem
+            // 
+            this.clearToolStripMenuItem.Image = global::Cryptograph_Whois_DNS_Tools.Properties.Resources.edit_clear;
+            this.clearToolStripMenuItem.Name = "clearToolStripMenuItem";
+            this.clearToolStripMenuItem.Size = new System.Drawing.Size(101, 22);
+            this.clearToolStripMenuItem.Text = "&Clear";
+            // 
             // txtUrl
             // 
             this.txtUrl.Location = new System.Drawing.Point(10, 10);
@@ -85,21 +92,14 @@
             // 
             // btnQuery
             // 
-            this.btnQuery.Location = new System.Drawing.Point(468, 10);
+            this.btnQuery.Location = new System.Drawing.Point(468, 9);
             this.btnQuery.Margin = new System.Windows.Forms.Padding(2);
             this.btnQuery.Name = "btnQuery";
-            this.btnQuery.Size = new System.Drawing.Size(56, 19);
+            this.btnQuery.Size = new System.Drawing.Size(56, 21);
             this.btnQuery.TabIndex = 3;
             this.btnQuery.Text = "Query";
             this.btnQuery.UseVisualStyleBackColor = true;
             this.btnQuery.Click += new System.EventHandler(this.btnQuery_Click);
-            // 
-            // clearToolStripMenuItem
-            // 
-            this.clearToolStripMenuItem.Image = global::Cryptograph_Whois_DNS_Tools.Properties.Resources.edit_clear;
-            this.clearToolStripMenuItem.Name = "clearToolStripMenuItem";
-            this.clearToolStripMenuItem.Size = new System.Drawing.Size(101, 22);
-            this.clearToolStripMenuItem.Text = "&Clear";
             // 
             // frmSRV
             // 

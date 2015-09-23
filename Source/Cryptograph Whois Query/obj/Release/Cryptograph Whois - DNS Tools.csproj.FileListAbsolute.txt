@@ -22,3 +22,4 @@ C:\Users\MuhammedNiyazi\Documents\GitHub\Cryptograph-Whois-DNS-Tools\Source\Cryp
 C:\Users\MuhammedNiyazi\Documents\GitHub\Cryptograph-Whois-DNS-Tools\Source\Cryptograph Whois Query\obj\Release\Cryptograph Whois & DNS Tools.pdb
 C:\Users\MuhammedNiyazi\Documents\GitHub\Cryptograph-Whois-DNS-Tools\Source\Cryptograph Whois Query\obj\Release\Cryptograph Whois - DNS Tools.csprojResolveAssemblyReference.cache
 C:\Users\MuhammedNiyazi\Documents\GitHub\Cryptograph-Whois-DNS-Tools\Source\Cryptograph Whois Query\obj\Release\Cryptograph_Whois_DNS_Tools.frmSRV.resources
+C:\Users\MuhammedNiyazi\Documents\GitHub\Cryptograph-Whois-DNS-Tools\Source\Cryptograph Whois Query\obj\Release\Cryptograph_Whois_DNS_Tools.frmSettings.resources

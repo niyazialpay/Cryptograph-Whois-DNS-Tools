@@ -13,14 +13,21 @@ namespace Cryptograph_Whois_DNS_Tools
         DNS dns = new DNS();
         private void btnQuery_Click(object sender, EventArgs e)
         {
-            foreach (string item in dns.MXRecords(txtUrl.Text))
+            try
             {
-                ListViewItem lvimx = new ListViewItem();
-                lvimx.Text = txtUrl.Text;
-                lvimx.SubItems.Add(item);
-                listView1.Items.Add(lvimx);
+                foreach (string item in dns.MXRecords(txtUrl.Text))
+                {
+                    ListViewItem lvimx = new ListViewItem();
+                    lvimx.Text = txtUrl.Text;
+                    lvimx.SubItems.Add(item);
+                    listView1.Items.Add(lvimx);
+                }
+                txtUrl.Clear();
             }
-            txtUrl.Clear();
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
         private void listView1_DoubleClick(object sender, EventArgs e)
         {

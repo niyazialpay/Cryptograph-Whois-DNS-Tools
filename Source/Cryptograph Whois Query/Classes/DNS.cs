@@ -6,14 +6,16 @@ namespace Cryptograph_Whois_DNS_Tools
 {
     public class DNS
     {
-        private readonly Resolver _resolver;
+        public Resolver _resolver;
+
+        Settings settings = new Settings();
 
         public DNS()
         {
             _resolver = new Resolver();
             _resolver.Recursion = true;
-            _resolver.UseCache = true;
-            _resolver.DnsServer = "8.8.8.8"; // Google Public DNS
+            _resolver.UseCache = Convert.ToBoolean(settings.SettingsRead("cache")); ;
+            _resolver.DnsServer = settings.SettingsRead("server");
 
             _resolver.TimeOut = 1000;
             _resolver.Retries = 3;

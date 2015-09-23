@@ -92,10 +92,10 @@
             // 
             // btnQuery
             // 
-            this.btnQuery.Location = new System.Drawing.Point(467, 9);
+            this.btnQuery.Location = new System.Drawing.Point(467, 8);
             this.btnQuery.Margin = new System.Windows.Forms.Padding(2);
             this.btnQuery.Name = "btnQuery";
-            this.btnQuery.Size = new System.Drawing.Size(56, 19);
+            this.btnQuery.Size = new System.Drawing.Size(56, 21);
             this.btnQuery.TabIndex = 12;
             this.btnQuery.Text = "Query";
             this.btnQuery.UseVisualStyleBackColor = true;

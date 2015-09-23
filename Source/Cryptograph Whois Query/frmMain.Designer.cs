@@ -40,6 +40,7 @@
             this.btnQuery = new System.Windows.Forms.Button();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.whoisTextBox = new System.Windows.Forms.RichTextBox();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
             this.txtRecordView = new System.Windows.Forms.ListView();
@@ -70,6 +71,16 @@
             this.toolStripDropDownButton6 = new System.Windows.Forms.ToolStripDropDownButton();
             this.toolStripStatusLabel5 = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolStripDropDownButton7 = new System.Windows.Forms.ToolStripDropDownButton();
+            this.dropdownA = new System.Windows.Forms.ToolStripMenuItem();
+            this.dropdownCNAME = new System.Windows.Forms.ToolStripMenuItem();
+            this.dropdownNS = new System.Windows.Forms.ToolStripMenuItem();
+            this.dropdownMX = new System.Windows.Forms.ToolStripMenuItem();
+            this.dropdownPTR = new System.Windows.Forms.ToolStripMenuItem();
+            this.dropdownTXT = new System.Windows.Forms.ToolStripMenuItem();
+            this.dropdownSOA = new System.Windows.Forms.ToolStripMenuItem();
+            this.dropdownSRV = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripStatusLabel6 = new System.Windows.Forms.ToolStripStatusLabel();
+            this.toolStripSplitButton1 = new System.Windows.Forms.ToolStripSplitButton();
             this.toolStripDropDownButton1 = new System.Windows.Forms.ToolStripDropDownButton();
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolStripDropDownButton2 = new System.Windows.Forms.ToolStripDropDownButton();
@@ -94,15 +105,6 @@
             this.toolStripMenuItem5 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem6 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem14 = new System.Windows.Forms.ToolStripMenuItem();
-            this.whoisTextBox = new System.Windows.Forms.RichTextBox();
-            this.dropdownA = new System.Windows.Forms.ToolStripMenuItem();
-            this.dropdownCNAME = new System.Windows.Forms.ToolStripMenuItem();
-            this.dropdownNS = new System.Windows.Forms.ToolStripMenuItem();
-            this.dropdownMX = new System.Windows.Forms.ToolStripMenuItem();
-            this.dropdownPTR = new System.Windows.Forms.ToolStripMenuItem();
-            this.dropdownTXT = new System.Windows.Forms.ToolStripMenuItem();
-            this.dropdownSOA = new System.Windows.Forms.ToolStripMenuItem();
-            this.dropdownSRV = new System.Windows.Forms.ToolStripMenuItem();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
@@ -238,6 +240,23 @@
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Whois";
             this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // whoisTextBox
+            // 
+            this.whoisTextBox.BackColor = System.Drawing.Color.White;
+            this.whoisTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.whoisTextBox.ContextMenuStrip = this.contextMenuStrip1;
+            this.whoisTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.whoisTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.whoisTextBox.Location = new System.Drawing.Point(3, 3);
+            this.whoisTextBox.Margin = new System.Windows.Forms.Padding(10);
+            this.whoisTextBox.Name = "whoisTextBox";
+            this.whoisTextBox.ReadOnly = true;
+            this.whoisTextBox.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.Vertical;
+            this.whoisTextBox.Size = new System.Drawing.Size(858, 460);
+            this.whoisTextBox.TabIndex = 0;
+            this.whoisTextBox.Text = "";
+            this.whoisTextBox.LinkClicked += new System.Windows.Forms.LinkClickedEventHandler(this.whoisTextBox_LinkClicked);
             // 
             // tabPage2
             // 
@@ -515,7 +534,9 @@
             this.dnsStatusBar.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripDropDownButton6,
             this.toolStripStatusLabel5,
-            this.toolStripDropDownButton7});
+            this.toolStripDropDownButton7,
+            this.toolStripStatusLabel6,
+            this.toolStripSplitButton1});
             this.dnsStatusBar.Location = new System.Drawing.Point(0, 539);
             this.dnsStatusBar.Name = "dnsStatusBar";
             this.dnsStatusBar.Size = new System.Drawing.Size(884, 22);
@@ -554,6 +575,85 @@
             this.toolStripDropDownButton7.Name = "toolStripDropDownButton7";
             this.toolStripDropDownButton7.Size = new System.Drawing.Size(90, 20);
             this.toolStripDropDownButton7.Text = "&DNS Tools";
+            // 
+            // dropdownA
+            // 
+            this.dropdownA.Image = global::Cryptograph_Whois_DNS_Tools.Properties.Resources.a;
+            this.dropdownA.Name = "dropdownA";
+            this.dropdownA.Size = new System.Drawing.Size(116, 22);
+            this.dropdownA.Text = "&A";
+            this.dropdownA.Click += new System.EventHandler(this.aToolStripMenuItem_Click);
+            // 
+            // dropdownCNAME
+            // 
+            this.dropdownCNAME.Image = global::Cryptograph_Whois_DNS_Tools.Properties.Resources.cname;
+            this.dropdownCNAME.Name = "dropdownCNAME";
+            this.dropdownCNAME.Size = new System.Drawing.Size(116, 22);
+            this.dropdownCNAME.Text = "&CNAME";
+            this.dropdownCNAME.Click += new System.EventHandler(this.cNAMEToolStripMenuItem_Click);
+            // 
+            // dropdownNS
+            // 
+            this.dropdownNS.Image = global::Cryptograph_Whois_DNS_Tools.Properties.Resources.http;
+            this.dropdownNS.Name = "dropdownNS";
+            this.dropdownNS.Size = new System.Drawing.Size(116, 22);
+            this.dropdownNS.Text = "&NS";
+            this.dropdownNS.Click += new System.EventHandler(this.nSToolStripMenuItem_Click);
+            // 
+            // dropdownMX
+            // 
+            this.dropdownMX.Image = global::Cryptograph_Whois_DNS_Tools.Properties.Resources.mx;
+            this.dropdownMX.Name = "dropdownMX";
+            this.dropdownMX.Size = new System.Drawing.Size(116, 22);
+            this.dropdownMX.Text = "&MX";
+            this.dropdownMX.Click += new System.EventHandler(this.mXToolStripMenuItem_Click);
+            // 
+            // dropdownPTR
+            // 
+            this.dropdownPTR.Image = global::Cryptograph_Whois_DNS_Tools.Properties.Resources.ptr;
+            this.dropdownPTR.Name = "dropdownPTR";
+            this.dropdownPTR.Size = new System.Drawing.Size(116, 22);
+            this.dropdownPTR.Text = "&PTR";
+            this.dropdownPTR.Click += new System.EventHandler(this.pTRToolStripMenuItem_Click);
+            // 
+            // dropdownTXT
+            // 
+            this.dropdownTXT.Image = global::Cryptograph_Whois_DNS_Tools.Properties.Resources.txt;
+            this.dropdownTXT.Name = "dropdownTXT";
+            this.dropdownTXT.Size = new System.Drawing.Size(116, 22);
+            this.dropdownTXT.Text = "&TXT";
+            this.dropdownTXT.Click += new System.EventHandler(this.tXTToolStripMenuItem_Click);
+            // 
+            // dropdownSOA
+            // 
+            this.dropdownSOA.Image = global::Cryptograph_Whois_DNS_Tools.Properties.Resources.soa;
+            this.dropdownSOA.Name = "dropdownSOA";
+            this.dropdownSOA.Size = new System.Drawing.Size(116, 22);
+            this.dropdownSOA.Text = "&SOA";
+            this.dropdownSOA.Click += new System.EventHandler(this.sOAToolStripMenuItem_Click);
+            // 
+            // dropdownSRV
+            // 
+            this.dropdownSRV.Image = global::Cryptograph_Whois_DNS_Tools.Properties.Resources.srv;
+            this.dropdownSRV.Name = "dropdownSRV";
+            this.dropdownSRV.Size = new System.Drawing.Size(116, 22);
+            this.dropdownSRV.Text = "S&RV";
+            this.dropdownSRV.Click += new System.EventHandler(this.sRVToolStripMenuItem_Click);
+            // 
+            // toolStripStatusLabel6
+            // 
+            this.toolStripStatusLabel6.Name = "toolStripStatusLabel6";
+            this.toolStripStatusLabel6.Size = new System.Drawing.Size(10, 17);
+            this.toolStripStatusLabel6.Text = "|";
+            // 
+            // toolStripSplitButton1
+            // 
+            this.toolStripSplitButton1.Image = global::Cryptograph_Whois_DNS_Tools.Properties.Resources.settings_image;
+            this.toolStripSplitButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripSplitButton1.Name = "toolStripSplitButton1";
+            this.toolStripSplitButton1.Size = new System.Drawing.Size(81, 20);
+            this.toolStripSplitButton1.Text = "Settings";
+            this.toolStripSplitButton1.Click += new System.EventHandler(this.toolStripSplitButton1_Click);
             // 
             // toolStripDropDownButton1
             // 
@@ -675,86 +775,6 @@
             this.toolStripMenuItem14.Name = "toolStripMenuItem14";
             this.toolStripMenuItem14.Size = new System.Drawing.Size(32, 19);
             // 
-            // whoisTextBox
-            // 
-            this.whoisTextBox.BackColor = System.Drawing.Color.White;
-            this.whoisTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.whoisTextBox.ContextMenuStrip = this.contextMenuStrip1;
-            this.whoisTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.whoisTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.whoisTextBox.Location = new System.Drawing.Point(3, 3);
-            this.whoisTextBox.Name = "whoisTextBox";
-            this.whoisTextBox.ReadOnly = true;
-            this.whoisTextBox.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.Vertical;
-            this.whoisTextBox.Size = new System.Drawing.Size(858, 460);
-            this.whoisTextBox.TabIndex = 0;
-            this.whoisTextBox.Text = "";
-            this.whoisTextBox.LinkClicked += new System.Windows.Forms.LinkClickedEventHandler(this.whoisTextBox_LinkClicked);
-            // 
-            // dropdownA
-            // 
-            this.dropdownA.Image = global::Cryptograph_Whois_DNS_Tools.Properties.Resources.a;
-            this.dropdownA.Name = "dropdownA";
-            this.dropdownA.Size = new System.Drawing.Size(152, 22);
-            this.dropdownA.Text = "&A";
-            this.dropdownA.Click += new System.EventHandler(this.aToolStripMenuItem_Click);
-            // 
-            // dropdownCNAME
-            // 
-            this.dropdownCNAME.Image = global::Cryptograph_Whois_DNS_Tools.Properties.Resources.cname;
-            this.dropdownCNAME.Name = "dropdownCNAME";
-            this.dropdownCNAME.Size = new System.Drawing.Size(152, 22);
-            this.dropdownCNAME.Text = "&CNAME";
-            this.dropdownCNAME.Click += new System.EventHandler(this.cNAMEToolStripMenuItem_Click);
-            // 
-            // dropdownNS
-            // 
-            this.dropdownNS.Image = global::Cryptograph_Whois_DNS_Tools.Properties.Resources.http;
-            this.dropdownNS.Name = "dropdownNS";
-            this.dropdownNS.Size = new System.Drawing.Size(152, 22);
-            this.dropdownNS.Text = "&NS";
-            this.dropdownNS.Click += new System.EventHandler(this.nSToolStripMenuItem_Click);
-            // 
-            // dropdownMX
-            // 
-            this.dropdownMX.Image = global::Cryptograph_Whois_DNS_Tools.Properties.Resources.mx;
-            this.dropdownMX.Name = "dropdownMX";
-            this.dropdownMX.Size = new System.Drawing.Size(152, 22);
-            this.dropdownMX.Text = "&MX";
-            this.dropdownMX.Click += new System.EventHandler(this.mXToolStripMenuItem_Click);
-            // 
-            // dropdownPTR
-            // 
-            this.dropdownPTR.Image = global::Cryptograph_Whois_DNS_Tools.Properties.Resources.ptr;
-            this.dropdownPTR.Name = "dropdownPTR";
-            this.dropdownPTR.Size = new System.Drawing.Size(152, 22);
-            this.dropdownPTR.Text = "&PTR";
-            this.dropdownPTR.Click += new System.EventHandler(this.pTRToolStripMenuItem_Click);
-            // 
-            // dropdownTXT
-            // 
-            this.dropdownTXT.Image = global::Cryptograph_Whois_DNS_Tools.Properties.Resources.txt;
-            this.dropdownTXT.Name = "dropdownTXT";
-            this.dropdownTXT.Size = new System.Drawing.Size(152, 22);
-            this.dropdownTXT.Text = "&TXT";
-            this.dropdownTXT.Click += new System.EventHandler(this.tXTToolStripMenuItem_Click);
-            // 
-            // dropdownSOA
-            // 
-            this.dropdownSOA.Image = global::Cryptograph_Whois_DNS_Tools.Properties.Resources.soa;
-            this.dropdownSOA.Name = "dropdownSOA";
-            this.dropdownSOA.Size = new System.Drawing.Size(152, 22);
-            this.dropdownSOA.Text = "&SOA";
-            this.dropdownSOA.Click += new System.EventHandler(this.sOAToolStripMenuItem_Click);
-            // 
-            // dropdownSRV
-            // 
-            this.dropdownSRV.Image = global::Cryptograph_Whois_DNS_Tools.Properties.Resources.srv;
-            this.dropdownSRV.Name = "dropdownSRV";
-            this.dropdownSRV.Size = new System.Drawing.Size(152, 22);
-            this.dropdownSRV.Text = "S&RV";
-            this.dropdownSRV.Click += new System.EventHandler(this.sRVToolStripMenuItem_Click);
-            // 
             // frmMain
             // 
             this.AcceptButton = this.btnQuery;
@@ -769,6 +789,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Cryptograph Whois & DNS Tools";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmMain_FormClosing);
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frmMain_FormClosed);
             this.Load += new System.EventHandler(this.frmMain_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
@@ -863,6 +884,8 @@
         private System.Windows.Forms.ToolStripMenuItem dropdownTXT;
         private System.Windows.Forms.ToolStripMenuItem dropdownSOA;
         private System.Windows.Forms.ToolStripMenuItem dropdownSRV;
+        private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel6;
+        private System.Windows.Forms.ToolStripSplitButton toolStripSplitButton1;
     }
 }
 
