@@ -50,5 +50,13 @@ namespace Cryptograph_Whois_DNS_Tools
             txtDNSserver.Text = settings.SettingsRead("server");
             cacheCheckbox.Checked = Convert.ToBoolean(settings.SettingsRead("cache"));
         }
+
+        private void frmSettings_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Escape)
+            {
+                this.Close();
+            }
+        }
     }
 }

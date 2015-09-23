@@ -119,6 +119,7 @@
             this.Controls.Add(this.txtDNSserver);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.KeyPreview = true;
             this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(324, 123);
             this.MinimizeBox = false;
@@ -127,6 +128,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Settings";
             this.Load += new System.EventHandler(this.frmSettings_Load);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.frmSettings_KeyDown);
             this.ResumeLayout(false);
             this.PerformLayout();
 

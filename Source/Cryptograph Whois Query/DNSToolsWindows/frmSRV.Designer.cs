@@ -112,6 +112,7 @@
             this.Controls.Add(this.btnQuery);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.KeyPreview = true;
             this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(550, 350);
             this.MinimizeBox = false;
@@ -120,6 +121,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Service Record";
             this.Load += new System.EventHandler(this.frmA_Load);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.frmSRV_KeyDown);
             this.contextMenuStrip1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();

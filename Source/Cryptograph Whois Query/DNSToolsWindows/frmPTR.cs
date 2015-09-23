@@ -41,5 +41,13 @@ namespace Cryptograph_Whois_DNS_Tools
         {
             listView1.Items.Clear();
         }
+
+        private void frmPTR_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Escape)
+            {
+                this.Close();
+            }
+        }
     }
 }

@@ -220,12 +220,19 @@ namespace Cryptograph_Whois_DNS_Tools
 
         private void frmMain_FormClosing(object sender, FormClosingEventArgs e)
         {
-            Application.Exit();
-        }
-
-        private void frmMain_FormClosed(object sender, FormClosedEventArgs e)
-        {
-            Application.Exit();
+            DialogResult result = MessageBox.Show("Are you sure you want to close the application?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (result == DialogResult.Yes)
+            {
+                e.Cancel = false;
+            }
+            else if (result == DialogResult.No)
+            {
+                e.Cancel = true;
+            }
+            else
+            {
+                e.Cancel = true;
+            }
         }
 
         private void aToolStripMenuItem_Click(object sender, EventArgs e)
