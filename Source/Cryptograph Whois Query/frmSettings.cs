@@ -15,6 +15,9 @@ namespace Cryptograph_Whois_DNS_Tools
 
         private void btnSave_Click(object sender, EventArgs e)
         {
+            txtDNSserver.Enabled = false;
+            cacheCheckbox.Enabled = false;
+            btnSave.Enabled = false;
             string[] information = { txtDNSserver.Text, cacheCheckbox.Checked.ToString().ToLower() };
             if (settings.SettingsWrite(information))
             {
@@ -24,25 +27,10 @@ namespace Cryptograph_Whois_DNS_Tools
             else
             {
                 MessageBox.Show("XML Error", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                txtDNSserver.Enabled = true;
+                cacheCheckbox.Enabled = true;
+                btnSave.Enabled = true;
             }
-            /*XmlTextWriter xmlWrite = new XmlTextWriter(AppDomain.CurrentDomain.BaseDirectory + "\\settings.xml", System.Text.UTF8Encoding.UTF8);
-            xmlWrite.Formatting = Formatting.Indented;
-            try
-            {
-                xmlWrite.WriteStartDocument();
-                xmlWrite.WriteStartElement("root");
-                xmlWrite.WriteStartElement("settings");
-                xmlWrite.WriteElementString("server", txtDNSserver.Text);
-                xmlWrite.WriteElementString("cache", cacheCheckbox.Checked.ToString().ToLower());
-                xmlWrite.WriteEndElement();
-                xmlWrite.WriteEndElement();
-                xmlWrite.Close();
-                
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message,"Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }*/
         }
 
         private void frmSettings_Load(object sender, EventArgs e)

@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <root>
   <settings>
-    <server>8.8.8.8</server>
-    <cache>true</cache>
+    <server>8.8.4.4</server>
+    <cache>false</cache>
   </settings>
 </root>

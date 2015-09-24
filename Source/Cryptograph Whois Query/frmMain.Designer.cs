@@ -81,6 +81,7 @@
             this.dropdownSRV = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripStatusLabel6 = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolStripSplitButton1 = new System.Windows.Forms.ToolStripSplitButton();
+            this.progressbar = new System.Windows.Forms.ToolStripProgressBar();
             this.toolStripDropDownButton1 = new System.Windows.Forms.ToolStripDropDownButton();
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolStripDropDownButton2 = new System.Windows.Forms.ToolStripDropDownButton();
@@ -105,6 +106,7 @@
             this.toolStripMenuItem5 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem6 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem14 = new System.Windows.Forms.ToolStripMenuItem();
+            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
@@ -536,7 +538,8 @@
             this.toolStripStatusLabel5,
             this.toolStripDropDownButton7,
             this.toolStripStatusLabel6,
-            this.toolStripSplitButton1});
+            this.toolStripSplitButton1,
+            this.progressbar});
             this.dnsStatusBar.Location = new System.Drawing.Point(0, 539);
             this.dnsStatusBar.Name = "dnsStatusBar";
             this.dnsStatusBar.Size = new System.Drawing.Size(884, 22);
@@ -656,6 +659,12 @@
             this.toolStripSplitButton1.Tag = "Settings";
             this.toolStripSplitButton1.Text = "Settings";
             this.toolStripSplitButton1.Click += new System.EventHandler(this.toolStripSplitButton1_Click);
+            // 
+            // progressbar
+            // 
+            this.progressbar.Name = "progressbar";
+            this.progressbar.Size = new System.Drawing.Size(100, 16);
+            this.progressbar.Visible = false;
             // 
             // toolStripDropDownButton1
             // 
@@ -777,6 +786,12 @@
             this.toolStripMenuItem14.Name = "toolStripMenuItem14";
             this.toolStripMenuItem14.Size = new System.Drawing.Size(32, 19);
             // 
+            // backgroundWorker1
+            // 
+            this.backgroundWorker1.WorkerReportsProgress = true;
+            this.backgroundWorker1.DoWork += new System.ComponentModel.DoWorkEventHandler(this.backgroundWorker1_DoWork);
+            this.backgroundWorker1.ProgressChanged += new System.ComponentModel.ProgressChangedEventHandler(this.backgroundWorker1_ProgressChanged);
+            // 
             // frmMain
             // 
             this.AcceptButton = this.btnQuery;
@@ -887,6 +902,8 @@
         private System.Windows.Forms.ToolStripMenuItem dropdownSRV;
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel6;
         private System.Windows.Forms.ToolStripSplitButton toolStripSplitButton1;
+        private System.Windows.Forms.ToolStripProgressBar progressbar;
+        private System.ComponentModel.BackgroundWorker backgroundWorker1;
     }
 }
 

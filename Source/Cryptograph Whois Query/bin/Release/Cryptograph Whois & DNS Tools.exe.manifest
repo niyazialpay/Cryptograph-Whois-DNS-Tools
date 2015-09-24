@@ -54,14 +54,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Cryptograph Whois &amp; DNS Tools.exe" size="348632">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Cryptograph Whois &amp; DNS Tools.exe" size="353240">
       <assemblyIdentity name="Cryptograph Whois &amp; DNS Tools" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>2SI96JZD1k4dLjDVw+zrBz54xRU=</dsig:DigestValue>
+        <dsig:DigestValue>81FDXLvKkpQ8mNzyLYky44wJjA8=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

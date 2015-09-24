@@ -1,7 +1,8 @@
 ﻿using System;
 using System.Windows.Forms;
 using System.Globalization;
-using System.Threading;
+using System.Collections.Generic;
+using System.ComponentModel;
 
 namespace Cryptograph_Whois_DNS_Tools
 {
@@ -27,190 +28,14 @@ namespace Cryptograph_Whois_DNS_Tools
             }
             else
             {
-                Thread threadwhois = new Thread(new ThreadStart(whoisfunction));
-                Thread threaddns = new Thread(new ThreadStart(dnsqueryfunction));
-                Thread threadidn = new Thread(new ThreadStart(idnfunction));
-
-                if (tabPage1.Enabled == true)
+                progressbar.Visible = true;
+                btnQuery.Enabled = false;
+                txtUrl.Enabled = false;
+                backgroundWorker1.RunWorkerAsync(new Dictionary<string, string>()
                 {
-                    threadwhois.Priority = ThreadPriority.Highest;
-                    threaddns.Priority = ThreadPriority.Lowest;
-                    threadidn.Priority = ThreadPriority.Lowest;
-                }
-                else if(tabPage2.Enabled==true)
-                {
-                    threaddns.Priority = ThreadPriority.Highest;
-                    threadwhois.Priority = ThreadPriority.Lowest;
-                    threadidn.Priority = ThreadPriority.Lowest;
-                }
-                else
-                {
-                    threaddns.Priority = ThreadPriority.Lowest;
-                    threadwhois.Priority = ThreadPriority.Lowest;
-                    threadidn.Priority = ThreadPriority.Highest;
-                }
-                threadwhois.Start();
-                threaddns.Start();
-                threadidn.Start();
+                    { "url", txtUrl.Text },
+                });
             }
-        }
-
-        public void idnfunction()
-        {
-            IdnMapping idn = new IdnMapping();
-            ListViewItem lvi = new ListViewItem();
-            lvi.Text = txtUrl.Text;
-            lvi.SubItems.Add(idn.GetAscii(txtUrl.Text));
-            idnListView.Items.Add(lvi);
-        }
-
-        public void dnsqueryfunction()
-        {
-            try
-            {
-                //a record
-                this.aRecordView.Items.Clear();
-                foreach (string aitem in dns.ARecords(txtUrl.Text))
-                {
-                    ListViewItem lvi = new ListViewItem();
-                    if (String.IsNullOrEmpty(aitem)) lvi.Text = "-";
-                    else
-                    {
-                        lvi.Text = aitem;
-                        try
-                        {
-                            //a ptr records
-                            this.aPTRview.Items.Clear();
-                            aPTRview.Items.Add(dns.PTRRecord(aitem));
-
-                            foreach (string wwwAitem in dns.ARecords("www." + txtUrl.Text))
-                            {
-                                if (String.IsNullOrEmpty(wwwAitem))
-                                {
-                                    lvi.SubItems.Add("-");
-                                }
-                                else lvi.SubItems.Add(wwwAitem);
-                            }
-
-                            aRecordView.Items.Add(lvi);
-                        }
-                        catch (FormatException ex)
-                        {
-                            //listView5.Items.Add("FormatException caught!!!");
-                            //listView5.Items.Add("Source : " + ex.Source);
-                            aPTRview.Items.Add(ex.Message);
-                        }
-                        catch (ArgumentNullException ex)
-                        {
-                            //listView5.Items.Add("ArgumentNullException caught!!!");
-                            //listView5.Items.Add("Source : " + ex.Source);
-                            aPTRview.Items.Add(ex.Message);
-                        }
-                        catch (Exception ex)
-                        {
-                            //listView5.Items.Add("Exception caught!!!");
-                            //listView5.Items.Add("Source : " + ex.Source);
-                            aPTRview.Items.Add(ex.Message);
-                        }
-                    }
-                }
-
-                //cname record
-                this.cnameRecordView.Items.Clear();
-
-                foreach (string cnameitem in dns.CnameRecord(txtUrl.Text))
-                {
-                    ListViewItem lvicname = new ListViewItem();
-                    if (String.IsNullOrEmpty(cnameitem)) lvicname.Text = "-";
-                    else lvicname.Text = cnameitem;
-
-                    foreach (string wwwcnameitem in dns.CnameRecord("www." + txtUrl.Text))
-                    {
-                        lvicname.SubItems.Add(wwwcnameitem);
-                    }
-
-                    cnameRecordView.Items.Add(lvicname);
-                }
-
-
-
-                //ns records
-                this.nsRecordView.Items.Clear();
-
-                foreach (string nsitem in dns.NSRecords(txtUrl.Text))
-                {
-                    ListViewItem lvins = new ListViewItem();
-                    lvins.Text = nsitem;
-                    foreach (string nsaitem in dns.ARecords(nsitem))
-                    {
-                        lvins.SubItems.Add(nsaitem);
-                    }
-                    nsRecordView.Items.Add(lvins);
-                }
-
-                //txt records
-                this.soaView.Items.Clear();
-
-                foreach (string txtitem in dns.TxtRecords(txtUrl.Text))
-                {
-                    soaView.Items.Add(txtitem);
-                }
-                
-                //soa record
-                soaView.Items.Clear();
-                foreach (string soaitem in dns.SOARecord(txtUrl.Text))
-                {
-                    soaView.Items.Add(soaitem);
-                }
-
-                //mx records
-                this.mxRecordView.Items.Clear();
-
-                foreach (string mxitem in dns.MXRecords(txtUrl.Text))
-                {
-                    ListViewItem lvimx = new ListViewItem();
-                    lvimx.Text = mxitem;
-                    foreach (string mxaitem in dns.ARecords(mxitem))
-                    {
-                        lvimx.SubItems.Add(mxaitem);
-                        //mx ptr records
-                        try
-                        {
-                            this.mxPTRview.Items.Clear();
-
-                            mxPTRview.Items.Add(dns.PTRRecord(mxaitem));
-                        }
-                        catch (FormatException ex)
-                        {
-                            //listView6.Items.Add("FormatException caught!!!");
-                            //listView6.Items.Add("Source : " + ex.Source);
-                            mxPTRview.Items.Add(ex.Message);
-                        }
-                        catch (ArgumentNullException ex)
-                        {
-                            //listView6.Items.Add("ArgumentNullException caught!!!");
-                            //listView6.Items.Add("Source : " + ex.Source);
-                            mxPTRview.Items.Add(ex.Message);
-                        }
-                        catch (Exception ex)
-                        {
-                            //listView6.Items.Add("Exception caught!!!");
-                            //listView6.Items.Add("Source : " + ex.Source);
-                            mxPTRview.Items.Add(ex.Message);
-                        }
-                    }
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
-
-        private void whoisfunction()
-        {
-            whois whois = new whois();
-            whoisTextBox.Text = whois.query(txtUrl.Text);
         }
 
         private void toolStripStatusLabel1_Click(object sender, EventArgs e)
@@ -375,6 +200,182 @@ namespace Cryptograph_Whois_DNS_Tools
         private void toolStripSplitButton1_Click(object sender, EventArgs e)
         {
             new frmSettings().ShowDialog();
+        }
+
+        private void backgroundWorker1_ProgressChanged(object sender, ProgressChangedEventArgs e)
+        {
+            progressbar.Value = e.ProgressPercentage;
+        }
+
+        private void backgroundWorker1_DoWork(object sender, DoWorkEventArgs e)
+        {
+            Dictionary<string, string> UserInputs = e.Argument as Dictionary<string, string>;
+            if (UserInputs != null)
+            {
+                try
+                {
+
+                    whois whois = new whois();
+                    whoisTextBox.Text = whois.query(UserInputs["url"]);
+
+                    backgroundWorker1.ReportProgress(5);
+
+                    IdnMapping idn = new IdnMapping();
+                    ListViewItem idnlvi = new ListViewItem();
+                    idnlvi.Text = txtUrl.Text;
+                    idnlvi.SubItems.Add(idn.GetAscii(UserInputs["url"]));
+                    idnListView.Items.Add(idnlvi);
+
+                    backgroundWorker1.ReportProgress(10);
+                    //a record
+                    this.aRecordView.Items.Clear();
+                    foreach (string aitem in dns.ARecords(UserInputs["url"]))
+                    {
+                        ListViewItem lvi = new ListViewItem();
+                        if (String.IsNullOrEmpty(aitem)) lvi.Text = "-";
+                        else
+                        {
+                            lvi.Text = aitem;
+                            try
+                            {
+                                //a ptr records
+                                this.aPTRview.Items.Clear();
+                                aPTRview.Items.Add(dns.PTRRecord(aitem));
+
+                                foreach (string wwwAitem in dns.ARecords("www." + UserInputs["url"]))
+                                {
+                                    if (String.IsNullOrEmpty(wwwAitem))
+                                    {
+                                        lvi.SubItems.Add("-");
+                                    }
+                                    else lvi.SubItems.Add(wwwAitem);
+                                }
+                                backgroundWorker1.ReportProgress(20);
+                                aRecordView.Items.Add(lvi);
+                            }
+                            catch (FormatException ex)
+                            {
+                                //listView5.Items.Add("FormatException caught!!!");
+                                //listView5.Items.Add("Source : " + ex.Source);
+                                aPTRview.Items.Add(ex.Message);
+                            }
+                            catch (ArgumentNullException ex)
+                            {
+                                //listView5.Items.Add("ArgumentNullException caught!!!");
+                                //listView5.Items.Add("Source : " + ex.Source);
+                                aPTRview.Items.Add(ex.Message);
+                            }
+                            catch (Exception ex)
+                            {
+                                //listView5.Items.Add("Exception caught!!!");
+                                //listView5.Items.Add("Source : " + ex.Source);
+                                aPTRview.Items.Add(ex.Message);
+                            }
+                        }
+                    }
+                    //cname record
+                    this.cnameRecordView.Items.Clear();
+
+                    foreach (string cnameitem in dns.CnameRecord(UserInputs["url"]))
+                    {
+                        ListViewItem lvicname = new ListViewItem();
+                        if (String.IsNullOrEmpty(cnameitem)) lvicname.Text = "-";
+                        else lvicname.Text = cnameitem;
+
+                        foreach (string wwwcnameitem in dns.CnameRecord("www." + UserInputs["url"]))
+                        {
+                            lvicname.SubItems.Add(wwwcnameitem);
+                        }
+
+                        cnameRecordView.Items.Add(lvicname);
+                    }
+                    backgroundWorker1.ReportProgress(40);
+
+
+                    //ns records
+                    this.nsRecordView.Items.Clear();
+
+                    foreach (string nsitem in dns.NSRecords(UserInputs["url"]))
+                    {
+                        ListViewItem lvins = new ListViewItem();
+                        lvins.Text = nsitem;
+                        foreach (string nsaitem in dns.ARecords(nsitem))
+                        {
+                            lvins.SubItems.Add(nsaitem);
+                        }
+                        nsRecordView.Items.Add(lvins);
+                    }
+                    backgroundWorker1.ReportProgress(60);
+
+                    //txt records
+                    this.soaView.Items.Clear();
+
+                    foreach (string txtitem in dns.TxtRecords(UserInputs["url"]))
+                    {
+                        soaView.Items.Add(txtitem);
+                    }
+                    backgroundWorker1.ReportProgress(70);
+
+                    //soa record
+                    soaView.Items.Clear();
+                    foreach (string soaitem in dns.SOARecord(UserInputs["url"]))
+                    {
+                        soaView.Items.Add(soaitem);
+                    }
+                    backgroundWorker1.ReportProgress(80);
+
+                    //mx records
+                    this.mxRecordView.Items.Clear();
+
+                    foreach (string mxitem in dns.MXRecords(UserInputs["url"]))
+                    {
+                        ListViewItem lvimx = new ListViewItem();
+                        lvimx.Text = mxitem;
+                        foreach (string mxaitem in dns.ARecords(mxitem))
+                        {
+                            lvimx.SubItems.Add(mxaitem);
+                            //mx ptr records
+                            try
+                            {
+                                this.mxPTRview.Items.Clear();
+
+                                mxPTRview.Items.Add(dns.PTRRecord(mxaitem));
+                            }
+                            catch (FormatException ex)
+                            {
+                                //listView6.Items.Add("FormatException caught!!!");
+                                //listView6.Items.Add("Source : " + ex.Source);
+                                mxPTRview.Items.Add(ex.Message);
+                            }
+                            catch (ArgumentNullException ex)
+                            {
+                                //listView6.Items.Add("ArgumentNullException caught!!!");
+                                //listView6.Items.Add("Source : " + ex.Source);
+                                mxPTRview.Items.Add(ex.Message);
+                            }
+                            catch (Exception ex)
+                            {
+                                //listView6.Items.Add("Exception caught!!!");
+                                //listView6.Items.Add("Source : " + ex.Source);
+                                mxPTRview.Items.Add(ex.Message);
+                            }
+                        }
+                    }
+                    backgroundWorker1.ReportProgress(100);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                finally
+                {
+                    progressbar.Visible = false;
+                    btnQuery.Enabled = true;
+                    txtUrl.Enabled = true;
+                    backgroundWorker1.ReportProgress(0);
+                    progressbar.Value = 0;
+                }
+            }
         }
     }
 }

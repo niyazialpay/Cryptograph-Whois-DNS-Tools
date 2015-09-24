@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Windows.Forms;
+using System.Collections.Generic;
+using System.ComponentModel;
 
 namespace Cryptograph_Whois_DNS_Tools
 {
@@ -13,20 +15,49 @@ namespace Cryptograph_Whois_DNS_Tools
         DNS dns = new DNS();
         private void btnQuery_Click(object sender, EventArgs e)
         {
-            try
-            {
-                foreach (string item in dns.TxtRecords(txtUrl.Text))
+            progressbar.Visible = true;
+            btnQuery.Enabled = false;
+            txtUrl.Enabled = false;
+            backgroundWorker1.RunWorkerAsync(new Dictionary<string, string>()
                 {
-                    ListViewItem lvimx = new ListViewItem();
-                    lvimx.Text = txtUrl.Text;
-                    lvimx.SubItems.Add(item);
-                    listView1.Items.Add(lvimx);
-                }
-                txtUrl.Clear();
-            }
-            catch (Exception ex)
+                    { "url", txtUrl.Text },
+                });
+        }
+        private void backgroundWorker1_ProgressChanged(object sender, ProgressChangedEventArgs e)
+        {
+            progressbar.Value = e.ProgressPercentage;
+        }
+
+        private void backgroundWorker1_DoWork(object sender, DoWorkEventArgs e)
+        {
+            Dictionary<string, string> UserInputs = e.Argument as Dictionary<string, string>;
+            if (UserInputs != null)
             {
-                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                try
+                {
+                    backgroundWorker1.ReportProgress(50);
+                    foreach (string item in dns.TxtRecords(UserInputs["url"]))
+                    {
+                        ListViewItem lvimx = new ListViewItem();
+                        lvimx.Text = UserInputs["url"];
+                        lvimx.SubItems.Add(item);
+                        listView1.Items.Add(lvimx);
+                    }
+                    txtUrl.Clear();
+                    backgroundWorker1.ReportProgress(100);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                finally
+                {
+                    progressbar.Visible = false;
+                    btnQuery.Enabled = true;
+                    txtUrl.Enabled = true;
+                    backgroundWorker1.ReportProgress(0);
+                    progressbar.Value = 0;
+                }
             }
         }
         private void listView1_DoubleClick(object sender, EventArgs e)
