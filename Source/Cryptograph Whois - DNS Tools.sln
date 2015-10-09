@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.23107.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cryptograph Whois - DNS Tools", "Cryptograph Whois Query\Cryptograph Whois - DNS Tools.csproj", "{F174AEE5-957E-4B29-A044-A15997576500}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cryptograph Whois - DNS - SSL Tools", "Cryptograph Whois Query\Cryptograph Whois - DNS - SSL Tools.csproj", "{F174AEE5-957E-4B29-A044-A15997576500}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

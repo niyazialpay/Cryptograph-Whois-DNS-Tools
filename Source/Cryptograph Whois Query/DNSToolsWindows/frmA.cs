@@ -82,6 +82,7 @@ namespace Cryptograph_Whois_DNS_Tools
                     txtUrl.Enabled = true;
                     backgroundWorker1.ReportProgress(0);
                     progressbar.Value = 0;
+                    txtUrl.Focus();
                 }
             }
         }

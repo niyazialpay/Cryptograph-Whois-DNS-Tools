@@ -36,7 +36,6 @@
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.clearToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
-            this.txtUrl = new System.Windows.Forms.TextBox();
             this.btnQuery = new System.Windows.Forms.Button();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
@@ -67,19 +66,23 @@
             this.idnListView = new System.Windows.Forms.ListView();
             this.domain = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.idndomain = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.dNSToolsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.aToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.cNAMEToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.nSToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.mXToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.pTRToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.tXTToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.sOAToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.sRVToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.sSLToolsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.sSLToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.certificateDecoderToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.cSRDecoderToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.dnsStatusBar = new System.Windows.Forms.StatusStrip();
             this.toolStripDropDownButton6 = new System.Windows.Forms.ToolStripDropDownButton();
             this.toolStripStatusLabel5 = new System.Windows.Forms.ToolStripStatusLabel();
-            this.toolStripDropDownButton7 = new System.Windows.Forms.ToolStripDropDownButton();
-            this.dropdownA = new System.Windows.Forms.ToolStripMenuItem();
-            this.dropdownCNAME = new System.Windows.Forms.ToolStripMenuItem();
-            this.dropdownNS = new System.Windows.Forms.ToolStripMenuItem();
-            this.dropdownMX = new System.Windows.Forms.ToolStripMenuItem();
-            this.dropdownPTR = new System.Windows.Forms.ToolStripMenuItem();
-            this.dropdownTXT = new System.Windows.Forms.ToolStripMenuItem();
-            this.dropdownSOA = new System.Windows.Forms.ToolStripMenuItem();
-            this.dropdownSRV = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripStatusLabel6 = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolStripSplitButton1 = new System.Windows.Forms.ToolStripSplitButton();
             this.progressbar = new System.Windows.Forms.ToolStripProgressBar();
             this.toolStripDropDownButton1 = new System.Windows.Forms.ToolStripDropDownButton();
@@ -107,6 +110,7 @@
             this.toolStripMenuItem6 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem14 = new System.Windows.Forms.ToolStripMenuItem();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
+            this.txtUrl = new System.Windows.Forms.RichTextBox();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
@@ -117,6 +121,7 @@
             this.tabPage2.SuspendLayout();
             this.tableLayoutPanel5.SuspendLayout();
             this.tabPage3.SuspendLayout();
+            this.menuStrip1.SuspendLayout();
             this.dnsStatusBar.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -124,30 +129,26 @@
             // 
             this.tableLayoutPanel1.ColumnCount = 1;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel1.Controls.Add(this.panel1, 0, 0);
-            this.tableLayoutPanel1.Controls.Add(this.dnsStatusBar, 0, 1);
+            this.tableLayoutPanel1.Controls.Add(this.panel1, 0, 1);
+            this.tableLayoutPanel1.Controls.Add(this.menuStrip1, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.dnsStatusBar, 0, 2);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 2;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel1.RowCount = 3;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 23F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(884, 561);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(884, 511);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
             // panel1
             // 
             this.panel1.Controls.Add(this.tableLayoutPanel2);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(3, 3);
+            this.panel1.Location = new System.Drawing.Point(3, 26);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(878, 532);
+            this.panel1.Size = new System.Drawing.Size(878, 462);
             this.panel1.TabIndex = 2;
             // 
             // tableLayoutPanel2
@@ -164,7 +165,7 @@
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 34F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(878, 532);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(878, 462);
             this.tableLayoutPanel2.TabIndex = 0;
             // 
             // contextMenuStrip1
@@ -186,9 +187,9 @@
             // 
             this.tableLayoutPanel3.ColumnCount = 2;
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 97F));
-            this.tableLayoutPanel3.Controls.Add(this.txtUrl, 0, 0);
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 88F));
             this.tableLayoutPanel3.Controls.Add(this.btnQuery, 1, 0);
+            this.tableLayoutPanel3.Controls.Add(this.txtUrl, 0, 0);
             this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel3.Location = new System.Drawing.Point(3, 3);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
@@ -198,22 +199,13 @@
             this.tableLayoutPanel3.Size = new System.Drawing.Size(872, 28);
             this.tableLayoutPanel3.TabIndex = 0;
             // 
-            // txtUrl
-            // 
-            this.txtUrl.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtUrl.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.txtUrl.Location = new System.Drawing.Point(3, 3);
-            this.txtUrl.Name = "txtUrl";
-            this.txtUrl.Size = new System.Drawing.Size(769, 23);
-            this.txtUrl.TabIndex = 0;
-            // 
             // btnQuery
             // 
             this.btnQuery.ContextMenuStrip = this.contextMenuStrip1;
             this.btnQuery.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnQuery.Location = new System.Drawing.Point(778, 3);
+            this.btnQuery.Location = new System.Drawing.Point(787, 3);
             this.btnQuery.Name = "btnQuery";
-            this.btnQuery.Size = new System.Drawing.Size(91, 22);
+            this.btnQuery.Size = new System.Drawing.Size(82, 22);
             this.btnQuery.TabIndex = 1;
             this.btnQuery.Text = "Query";
             this.btnQuery.UseVisualStyleBackColor = true;
@@ -229,7 +221,7 @@
             this.tabControl1.Location = new System.Drawing.Point(3, 37);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(872, 492);
+            this.tabControl1.Size = new System.Drawing.Size(872, 422);
             this.tabControl1.TabIndex = 1;
             // 
             // tabPage1
@@ -238,7 +230,7 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(864, 466);
+            this.tabPage1.Size = new System.Drawing.Size(864, 396);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Whois";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -255,10 +247,11 @@
             this.whoisTextBox.Name = "whoisTextBox";
             this.whoisTextBox.ReadOnly = true;
             this.whoisTextBox.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.Vertical;
-            this.whoisTextBox.Size = new System.Drawing.Size(858, 460);
+            this.whoisTextBox.Size = new System.Drawing.Size(858, 390);
             this.whoisTextBox.TabIndex = 0;
             this.whoisTextBox.Text = "";
             this.whoisTextBox.LinkClicked += new System.Windows.Forms.LinkClickedEventHandler(this.whoisTextBox_LinkClicked);
+            this.whoisTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.whoisTextBox_KeyPress);
             // 
             // tabPage2
             // 
@@ -266,7 +259,7 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(864, 466);
+            this.tabPage2.Size = new System.Drawing.Size(864, 396);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "DNS";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -294,7 +287,7 @@
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel5.Size = new System.Drawing.Size(858, 460);
+            this.tableLayoutPanel5.Size = new System.Drawing.Size(858, 390);
             this.tableLayoutPanel5.TabIndex = 4;
             // 
             // txtRecordView
@@ -306,9 +299,9 @@
             this.txtRecordView.FullRowSelect = true;
             this.txtRecordView.GridLines = true;
             this.txtRecordView.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
-            this.txtRecordView.Location = new System.Drawing.Point(3, 348);
+            this.txtRecordView.Location = new System.Drawing.Point(3, 252);
             this.txtRecordView.Name = "txtRecordView";
-            this.txtRecordView.Size = new System.Drawing.Size(423, 109);
+            this.txtRecordView.Size = new System.Drawing.Size(331, 79);
             this.txtRecordView.TabIndex = 7;
             this.txtRecordView.UseCompatibleStateImageBehavior = false;
             this.txtRecordView.View = System.Windows.Forms.View.Details;
@@ -327,9 +320,9 @@
             this.soaView.FullRowSelect = true;
             this.soaView.GridLines = true;
             this.soaView.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
-            this.soaView.Location = new System.Drawing.Point(432, 348);
+            this.soaView.Location = new System.Drawing.Point(3, 294);
             this.soaView.Name = "soaView";
-            this.soaView.Size = new System.Drawing.Size(423, 109);
+            this.soaView.Size = new System.Drawing.Size(423, 93);
             this.soaView.TabIndex = 6;
             this.soaView.UseCompatibleStateImageBehavior = false;
             this.soaView.View = System.Windows.Forms.View.Details;
@@ -348,9 +341,9 @@
             this.mxPTRview.FullRowSelect = true;
             this.mxPTRview.GridLines = true;
             this.mxPTRview.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
-            this.mxPTRview.Location = new System.Drawing.Point(3, 233);
+            this.mxPTRview.Location = new System.Drawing.Point(3, 197);
             this.mxPTRview.Name = "mxPTRview";
-            this.mxPTRview.Size = new System.Drawing.Size(423, 109);
+            this.mxPTRview.Size = new System.Drawing.Size(423, 91);
             this.mxPTRview.TabIndex = 5;
             this.mxPTRview.UseCompatibleStateImageBehavior = false;
             this.mxPTRview.View = System.Windows.Forms.View.Details;
@@ -369,9 +362,9 @@
             this.aPTRview.FullRowSelect = true;
             this.aPTRview.GridLines = true;
             this.aPTRview.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
-            this.aPTRview.Location = new System.Drawing.Point(432, 233);
+            this.aPTRview.Location = new System.Drawing.Point(432, 197);
             this.aPTRview.Name = "aPTRview";
-            this.aPTRview.Size = new System.Drawing.Size(423, 109);
+            this.aPTRview.Size = new System.Drawing.Size(423, 91);
             this.aPTRview.TabIndex = 4;
             this.aPTRview.UseCompatibleStateImageBehavior = false;
             this.aPTRview.View = System.Windows.Forms.View.Details;
@@ -391,9 +384,9 @@
             this.nsRecordView.FullRowSelect = true;
             this.nsRecordView.GridLines = true;
             this.nsRecordView.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
-            this.nsRecordView.Location = new System.Drawing.Point(3, 118);
+            this.nsRecordView.Location = new System.Drawing.Point(432, 100);
             this.nsRecordView.Name = "nsRecordView";
-            this.nsRecordView.Size = new System.Drawing.Size(423, 109);
+            this.nsRecordView.Size = new System.Drawing.Size(423, 91);
             this.nsRecordView.TabIndex = 3;
             this.nsRecordView.UseCompatibleStateImageBehavior = false;
             this.nsRecordView.View = System.Windows.Forms.View.Details;
@@ -419,9 +412,9 @@
             this.mxRecordView.GridLines = true;
             this.mxRecordView.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
             this.mxRecordView.LabelWrap = false;
-            this.mxRecordView.Location = new System.Drawing.Point(432, 118);
+            this.mxRecordView.Location = new System.Drawing.Point(3, 100);
             this.mxRecordView.Name = "mxRecordView";
-            this.mxRecordView.Size = new System.Drawing.Size(423, 109);
+            this.mxRecordView.Size = new System.Drawing.Size(423, 91);
             this.mxRecordView.TabIndex = 2;
             this.mxRecordView.UseCompatibleStateImageBehavior = false;
             this.mxRecordView.View = System.Windows.Forms.View.Details;
@@ -449,7 +442,7 @@
             this.cnameRecordView.LabelWrap = false;
             this.cnameRecordView.Location = new System.Drawing.Point(432, 3);
             this.cnameRecordView.Name = "cnameRecordView";
-            this.cnameRecordView.Size = new System.Drawing.Size(423, 109);
+            this.cnameRecordView.Size = new System.Drawing.Size(423, 91);
             this.cnameRecordView.TabIndex = 1;
             this.cnameRecordView.UseCompatibleStateImageBehavior = false;
             this.cnameRecordView.View = System.Windows.Forms.View.Details;
@@ -477,7 +470,7 @@
             this.aRecordView.LabelWrap = false;
             this.aRecordView.Location = new System.Drawing.Point(3, 3);
             this.aRecordView.Name = "aRecordView";
-            this.aRecordView.Size = new System.Drawing.Size(423, 109);
+            this.aRecordView.Size = new System.Drawing.Size(423, 91);
             this.aRecordView.TabIndex = 0;
             this.aRecordView.UseCompatibleStateImageBehavior = false;
             this.aRecordView.View = System.Windows.Forms.View.Details;
@@ -497,7 +490,7 @@
             this.tabPage3.Controls.Add(this.idnListView);
             this.tabPage3.Location = new System.Drawing.Point(4, 22);
             this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Size = new System.Drawing.Size(864, 466);
+            this.tabPage3.Size = new System.Drawing.Size(864, 396);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "IDN Converter";
             this.tabPage3.UseVisualStyleBackColor = true;
@@ -514,7 +507,7 @@
             this.idnListView.GridLines = true;
             this.idnListView.Location = new System.Drawing.Point(0, 0);
             this.idnListView.Name = "idnListView";
-            this.idnListView.Size = new System.Drawing.Size(864, 466);
+            this.idnListView.Size = new System.Drawing.Size(864, 396);
             this.idnListView.TabIndex = 2;
             this.idnListView.UseCompatibleStateImageBehavior = false;
             this.idnListView.View = System.Windows.Forms.View.Details;
@@ -530,19 +523,144 @@
             this.idndomain.Text = "IDN";
             this.idndomain.Width = 400;
             // 
+            // menuStrip1
+            // 
+            this.menuStrip1.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.dNSToolsToolStripMenuItem,
+            this.sSLToolsToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(884, 23);
+            this.menuStrip1.TabIndex = 4;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // dNSToolsToolStripMenuItem
+            // 
+            this.dNSToolsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.aToolStripMenuItem1,
+            this.cNAMEToolStripMenuItem,
+            this.nSToolStripMenuItem,
+            this.mXToolStripMenuItem,
+            this.pTRToolStripMenuItem,
+            this.tXTToolStripMenuItem,
+            this.sOAToolStripMenuItem,
+            this.sRVToolStripMenuItem});
+            this.dNSToolsToolStripMenuItem.Image = global::Cryptograph_Whois_DNS_Tools.Properties.Resources.dnsicon;
+            this.dNSToolsToolStripMenuItem.Name = "dNSToolsToolStripMenuItem";
+            this.dNSToolsToolStripMenuItem.Size = new System.Drawing.Size(89, 19);
+            this.dNSToolsToolStripMenuItem.Text = "&DNS Tools";
+            // 
+            // aToolStripMenuItem1
+            // 
+            this.aToolStripMenuItem1.Image = global::Cryptograph_Whois_DNS_Tools.Properties.Resources.a;
+            this.aToolStripMenuItem1.Name = "aToolStripMenuItem1";
+            this.aToolStripMenuItem1.Size = new System.Drawing.Size(116, 22);
+            this.aToolStripMenuItem1.Text = "&A";
+            this.aToolStripMenuItem1.Click += new System.EventHandler(this.aToolStripMenuItem_Click);
+            // 
+            // cNAMEToolStripMenuItem
+            // 
+            this.cNAMEToolStripMenuItem.Image = global::Cryptograph_Whois_DNS_Tools.Properties.Resources.cname;
+            this.cNAMEToolStripMenuItem.Name = "cNAMEToolStripMenuItem";
+            this.cNAMEToolStripMenuItem.Size = new System.Drawing.Size(116, 22);
+            this.cNAMEToolStripMenuItem.Text = "&CNAME";
+            this.cNAMEToolStripMenuItem.Click += new System.EventHandler(this.cNAMEToolStripMenuItem_Click);
+            // 
+            // nSToolStripMenuItem
+            // 
+            this.nSToolStripMenuItem.Image = global::Cryptograph_Whois_DNS_Tools.Properties.Resources.http;
+            this.nSToolStripMenuItem.Name = "nSToolStripMenuItem";
+            this.nSToolStripMenuItem.Size = new System.Drawing.Size(116, 22);
+            this.nSToolStripMenuItem.Text = "&NS";
+            this.nSToolStripMenuItem.Click += new System.EventHandler(this.nSToolStripMenuItem_Click);
+            // 
+            // mXToolStripMenuItem
+            // 
+            this.mXToolStripMenuItem.Image = global::Cryptograph_Whois_DNS_Tools.Properties.Resources.mx;
+            this.mXToolStripMenuItem.Name = "mXToolStripMenuItem";
+            this.mXToolStripMenuItem.Size = new System.Drawing.Size(116, 22);
+            this.mXToolStripMenuItem.Text = "&MX";
+            this.mXToolStripMenuItem.Click += new System.EventHandler(this.mXToolStripMenuItem_Click);
+            // 
+            // pTRToolStripMenuItem
+            // 
+            this.pTRToolStripMenuItem.Image = global::Cryptograph_Whois_DNS_Tools.Properties.Resources.ptr;
+            this.pTRToolStripMenuItem.Name = "pTRToolStripMenuItem";
+            this.pTRToolStripMenuItem.Size = new System.Drawing.Size(116, 22);
+            this.pTRToolStripMenuItem.Text = "&PTR";
+            this.pTRToolStripMenuItem.Click += new System.EventHandler(this.pTRToolStripMenuItem_Click);
+            // 
+            // tXTToolStripMenuItem
+            // 
+            this.tXTToolStripMenuItem.Image = global::Cryptograph_Whois_DNS_Tools.Properties.Resources.txt;
+            this.tXTToolStripMenuItem.Name = "tXTToolStripMenuItem";
+            this.tXTToolStripMenuItem.Size = new System.Drawing.Size(116, 22);
+            this.tXTToolStripMenuItem.Text = "&TXT";
+            this.tXTToolStripMenuItem.Click += new System.EventHandler(this.tXTToolStripMenuItem_Click);
+            // 
+            // sOAToolStripMenuItem
+            // 
+            this.sOAToolStripMenuItem.Image = global::Cryptograph_Whois_DNS_Tools.Properties.Resources.soa;
+            this.sOAToolStripMenuItem.Name = "sOAToolStripMenuItem";
+            this.sOAToolStripMenuItem.Size = new System.Drawing.Size(116, 22);
+            this.sOAToolStripMenuItem.Text = "&SOA";
+            this.sOAToolStripMenuItem.Click += new System.EventHandler(this.sOAToolStripMenuItem_Click);
+            // 
+            // sRVToolStripMenuItem
+            // 
+            this.sRVToolStripMenuItem.Image = global::Cryptograph_Whois_DNS_Tools.Properties.Resources.srv;
+            this.sRVToolStripMenuItem.Name = "sRVToolStripMenuItem";
+            this.sRVToolStripMenuItem.Size = new System.Drawing.Size(116, 22);
+            this.sRVToolStripMenuItem.Text = "S&RV";
+            this.sRVToolStripMenuItem.Click += new System.EventHandler(this.sRVToolStripMenuItem_Click);
+            // 
+            // sSLToolsToolStripMenuItem
+            // 
+            this.sSLToolsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.sSLToolStripMenuItem,
+            this.certificateDecoderToolStripMenuItem,
+            this.cSRDecoderToolStripMenuItem});
+            this.sSLToolsToolStripMenuItem.Image = global::Cryptograph_Whois_DNS_Tools.Properties.Resources.SSL;
+            this.sSLToolsToolStripMenuItem.Name = "sSLToolsToolStripMenuItem";
+            this.sSLToolsToolStripMenuItem.Size = new System.Drawing.Size(84, 19);
+            this.sSLToolsToolStripMenuItem.Text = "&SSL Tools";
+            // 
+            // sSLToolStripMenuItem
+            // 
+            this.sSLToolStripMenuItem.Image = global::Cryptograph_Whois_DNS_Tools.Properties.Resources.certificate;
+            this.sSLToolStripMenuItem.Name = "sSLToolStripMenuItem";
+            this.sSLToolStripMenuItem.Size = new System.Drawing.Size(175, 22);
+            this.sSLToolStripMenuItem.Text = "SSL &Check";
+            this.sSLToolStripMenuItem.Click += new System.EventHandler(this.sSLToolStripMenuItem_Click);
+            // 
+            // certificateDecoderToolStripMenuItem
+            // 
+            this.certificateDecoderToolStripMenuItem.Image = global::Cryptograph_Whois_DNS_Tools.Properties.Resources.csr;
+            this.certificateDecoderToolStripMenuItem.Name = "certificateDecoderToolStripMenuItem";
+            this.certificateDecoderToolStripMenuItem.Size = new System.Drawing.Size(175, 22);
+            this.certificateDecoderToolStripMenuItem.Text = "Certificate &Decoder";
+            this.certificateDecoderToolStripMenuItem.Click += new System.EventHandler(this.certificateCheck_click);
+            // 
+            // cSRDecoderToolStripMenuItem
+            // 
+            this.cSRDecoderToolStripMenuItem.Image = global::Cryptograph_Whois_DNS_Tools.Properties.Resources.csr;
+            this.cSRDecoderToolStripMenuItem.Name = "cSRDecoderToolStripMenuItem";
+            this.cSRDecoderToolStripMenuItem.Size = new System.Drawing.Size(175, 22);
+            this.cSRDecoderToolStripMenuItem.Text = "CS&R Decoder";
+            this.cSRDecoderToolStripMenuItem.Click += new System.EventHandler(this.csrCheck_click);
+            // 
             // dnsStatusBar
             // 
             this.dnsStatusBar.ContextMenuStrip = this.contextMenuStrip1;
             this.dnsStatusBar.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripDropDownButton6,
             this.toolStripStatusLabel5,
-            this.toolStripDropDownButton7,
-            this.toolStripStatusLabel6,
             this.toolStripSplitButton1,
             this.progressbar});
-            this.dnsStatusBar.Location = new System.Drawing.Point(0, 539);
+            this.dnsStatusBar.Location = new System.Drawing.Point(0, 491);
             this.dnsStatusBar.Name = "dnsStatusBar";
-            this.dnsStatusBar.Size = new System.Drawing.Size(884, 22);
+            this.dnsStatusBar.Size = new System.Drawing.Size(884, 20);
             this.dnsStatusBar.TabIndex = 3;
             this.dnsStatusBar.Text = "statusStrip1";
             // 
@@ -552,102 +670,15 @@
             this.toolStripDropDownButton6.Image = ((System.Drawing.Image)(resources.GetObject("toolStripDropDownButton6.Image")));
             this.toolStripDropDownButton6.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripDropDownButton6.Name = "toolStripDropDownButton6";
-            this.toolStripDropDownButton6.Size = new System.Drawing.Size(106, 20);
+            this.toolStripDropDownButton6.Size = new System.Drawing.Size(106, 18);
             this.toolStripDropDownButton6.Text = "M. Niyazi ALPAY";
             this.toolStripDropDownButton6.Click += new System.EventHandler(this.toolStripStatusLabel1_Click);
             // 
             // toolStripStatusLabel5
             // 
             this.toolStripStatusLabel5.Name = "toolStripStatusLabel5";
-            this.toolStripStatusLabel5.Size = new System.Drawing.Size(10, 17);
+            this.toolStripStatusLabel5.Size = new System.Drawing.Size(10, 15);
             this.toolStripStatusLabel5.Text = "|";
-            // 
-            // toolStripDropDownButton7
-            // 
-            this.toolStripDropDownButton7.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.dropdownA,
-            this.dropdownCNAME,
-            this.dropdownNS,
-            this.dropdownMX,
-            this.dropdownPTR,
-            this.dropdownTXT,
-            this.dropdownSOA,
-            this.dropdownSRV});
-            this.toolStripDropDownButton7.Image = ((System.Drawing.Image)(resources.GetObject("toolStripDropDownButton7.Image")));
-            this.toolStripDropDownButton7.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripDropDownButton7.Name = "toolStripDropDownButton7";
-            this.toolStripDropDownButton7.Size = new System.Drawing.Size(90, 20);
-            this.toolStripDropDownButton7.Text = "&DNS Tools";
-            // 
-            // dropdownA
-            // 
-            this.dropdownA.Image = global::Cryptograph_Whois_DNS_Tools.Properties.Resources.a;
-            this.dropdownA.Name = "dropdownA";
-            this.dropdownA.Size = new System.Drawing.Size(116, 22);
-            this.dropdownA.Text = "&A";
-            this.dropdownA.Click += new System.EventHandler(this.aToolStripMenuItem_Click);
-            // 
-            // dropdownCNAME
-            // 
-            this.dropdownCNAME.Image = global::Cryptograph_Whois_DNS_Tools.Properties.Resources.cname;
-            this.dropdownCNAME.Name = "dropdownCNAME";
-            this.dropdownCNAME.Size = new System.Drawing.Size(116, 22);
-            this.dropdownCNAME.Text = "&CNAME";
-            this.dropdownCNAME.Click += new System.EventHandler(this.cNAMEToolStripMenuItem_Click);
-            // 
-            // dropdownNS
-            // 
-            this.dropdownNS.Image = global::Cryptograph_Whois_DNS_Tools.Properties.Resources.http;
-            this.dropdownNS.Name = "dropdownNS";
-            this.dropdownNS.Size = new System.Drawing.Size(116, 22);
-            this.dropdownNS.Text = "&NS";
-            this.dropdownNS.Click += new System.EventHandler(this.nSToolStripMenuItem_Click);
-            // 
-            // dropdownMX
-            // 
-            this.dropdownMX.Image = global::Cryptograph_Whois_DNS_Tools.Properties.Resources.mx;
-            this.dropdownMX.Name = "dropdownMX";
-            this.dropdownMX.Size = new System.Drawing.Size(116, 22);
-            this.dropdownMX.Text = "&MX";
-            this.dropdownMX.Click += new System.EventHandler(this.mXToolStripMenuItem_Click);
-            // 
-            // dropdownPTR
-            // 
-            this.dropdownPTR.Image = global::Cryptograph_Whois_DNS_Tools.Properties.Resources.ptr;
-            this.dropdownPTR.Name = "dropdownPTR";
-            this.dropdownPTR.Size = new System.Drawing.Size(116, 22);
-            this.dropdownPTR.Text = "&PTR";
-            this.dropdownPTR.Click += new System.EventHandler(this.pTRToolStripMenuItem_Click);
-            // 
-            // dropdownTXT
-            // 
-            this.dropdownTXT.Image = global::Cryptograph_Whois_DNS_Tools.Properties.Resources.txt;
-            this.dropdownTXT.Name = "dropdownTXT";
-            this.dropdownTXT.Size = new System.Drawing.Size(116, 22);
-            this.dropdownTXT.Text = "&TXT";
-            this.dropdownTXT.Click += new System.EventHandler(this.tXTToolStripMenuItem_Click);
-            // 
-            // dropdownSOA
-            // 
-            this.dropdownSOA.Image = global::Cryptograph_Whois_DNS_Tools.Properties.Resources.soa;
-            this.dropdownSOA.Name = "dropdownSOA";
-            this.dropdownSOA.Size = new System.Drawing.Size(116, 22);
-            this.dropdownSOA.Text = "&SOA";
-            this.dropdownSOA.Click += new System.EventHandler(this.sOAToolStripMenuItem_Click);
-            // 
-            // dropdownSRV
-            // 
-            this.dropdownSRV.Image = global::Cryptograph_Whois_DNS_Tools.Properties.Resources.srv;
-            this.dropdownSRV.Name = "dropdownSRV";
-            this.dropdownSRV.Size = new System.Drawing.Size(116, 22);
-            this.dropdownSRV.Text = "S&RV";
-            this.dropdownSRV.Click += new System.EventHandler(this.sRVToolStripMenuItem_Click);
-            // 
-            // toolStripStatusLabel6
-            // 
-            this.toolStripStatusLabel6.Name = "toolStripStatusLabel6";
-            this.toolStripStatusLabel6.Size = new System.Drawing.Size(10, 17);
-            this.toolStripStatusLabel6.Text = "|";
             // 
             // toolStripSplitButton1
             // 
@@ -655,7 +686,7 @@
             this.toolStripSplitButton1.Image = global::Cryptograph_Whois_DNS_Tools.Properties.Resources.settings_image;
             this.toolStripSplitButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripSplitButton1.Name = "toolStripSplitButton1";
-            this.toolStripSplitButton1.Size = new System.Drawing.Size(32, 20);
+            this.toolStripSplitButton1.Size = new System.Drawing.Size(32, 18);
             this.toolStripSplitButton1.Tag = "Settings";
             this.toolStripSplitButton1.Text = "Settings";
             this.toolStripSplitButton1.Click += new System.EventHandler(this.toolStripSplitButton1_Click);
@@ -663,7 +694,7 @@
             // progressbar
             // 
             this.progressbar.Name = "progressbar";
-            this.progressbar.Size = new System.Drawing.Size(100, 16);
+            this.progressbar.Size = new System.Drawing.Size(100, 14);
             this.progressbar.Visible = false;
             // 
             // toolStripDropDownButton1
@@ -792,19 +823,29 @@
             this.backgroundWorker1.DoWork += new System.ComponentModel.DoWorkEventHandler(this.backgroundWorker1_DoWork);
             this.backgroundWorker1.ProgressChanged += new System.ComponentModel.ProgressChangedEventHandler(this.backgroundWorker1_ProgressChanged);
             // 
+            // txtUrl
+            // 
+            this.txtUrl.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txtUrl.Location = new System.Drawing.Point(3, 3);
+            this.txtUrl.Name = "txtUrl";
+            this.txtUrl.Size = new System.Drawing.Size(778, 22);
+            this.txtUrl.TabIndex = 2;
+            this.txtUrl.Text = "";
+            // 
             // frmMain
             // 
             this.AcceptButton = this.btnQuery;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(884, 561);
+            this.ClientSize = new System.Drawing.Size(884, 511);
             this.ContextMenuStrip = this.contextMenuStrip1;
             this.Controls.Add(this.tableLayoutPanel1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.MinimumSize = new System.Drawing.Size(600, 350);
+            this.MainMenuStrip = this.menuStrip1;
+            this.MinimumSize = new System.Drawing.Size(450, 300);
             this.Name = "frmMain";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Cryptograph Whois & DNS Tools";
+            this.Text = "Cryptograph Whois - DNS & SSL Tools";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmMain_FormClosing);
             this.Load += new System.EventHandler(this.frmMain_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
@@ -813,12 +854,13 @@
             this.tableLayoutPanel2.ResumeLayout(false);
             this.contextMenuStrip1.ResumeLayout(false);
             this.tableLayoutPanel3.ResumeLayout(false);
-            this.tableLayoutPanel3.PerformLayout();
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage2.ResumeLayout(false);
             this.tableLayoutPanel5.ResumeLayout(false);
             this.tabPage3.ResumeLayout(false);
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.dnsStatusBar.ResumeLayout(false);
             this.dnsStatusBar.PerformLayout();
             this.ResumeLayout(false);
@@ -832,7 +874,6 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
-        private System.Windows.Forms.TextBox txtUrl;
         private System.Windows.Forms.Button btnQuery;
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel1;
         private System.Windows.Forms.TabControl tabControl1;
@@ -883,27 +924,32 @@
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem5;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem6;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem14;
-        private System.Windows.Forms.StatusStrip dnsStatusBar;
-        private System.Windows.Forms.ToolStripDropDownButton toolStripDropDownButton6;
-        private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel5;
-        private System.Windows.Forms.ToolStripDropDownButton toolStripDropDownButton7;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.ToolStripMenuItem clearToolStripMenuItem;
         public System.Windows.Forms.ListView txtRecordView;
         private System.Windows.Forms.ColumnHeader columnHeader12;
         private System.Windows.Forms.RichTextBox whoisTextBox;
-        private System.Windows.Forms.ToolStripMenuItem dropdownA;
-        private System.Windows.Forms.ToolStripMenuItem dropdownCNAME;
-        private System.Windows.Forms.ToolStripMenuItem dropdownNS;
-        private System.Windows.Forms.ToolStripMenuItem dropdownMX;
-        private System.Windows.Forms.ToolStripMenuItem dropdownPTR;
-        private System.Windows.Forms.ToolStripMenuItem dropdownTXT;
-        private System.Windows.Forms.ToolStripMenuItem dropdownSOA;
-        private System.Windows.Forms.ToolStripMenuItem dropdownSRV;
-        private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel6;
+        private System.ComponentModel.BackgroundWorker backgroundWorker1;
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem dNSToolsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem sSLToolsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem aToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem cNAMEToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem nSToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem mXToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem pTRToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem tXTToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem sOAToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem sRVToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem sSLToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem certificateDecoderToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem cSRDecoderToolStripMenuItem;
+        private System.Windows.Forms.StatusStrip dnsStatusBar;
+        private System.Windows.Forms.ToolStripDropDownButton toolStripDropDownButton6;
+        private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel5;
         private System.Windows.Forms.ToolStripSplitButton toolStripSplitButton1;
         private System.Windows.Forms.ToolStripProgressBar progressbar;
-        private System.ComponentModel.BackgroundWorker backgroundWorker1;
+        private System.Windows.Forms.RichTextBox txtUrl;
     }
 }
 

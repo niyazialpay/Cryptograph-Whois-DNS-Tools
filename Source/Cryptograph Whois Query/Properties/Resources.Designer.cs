@@ -73,6 +73,16 @@ namespace Cryptograph_Whois_DNS_Tools.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap certificate {
+            get {
+                object obj = ResourceManager.GetObject("certificate", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap cname {
             get {
                 object obj = ResourceManager.GetObject("cname", resourceCulture);
@@ -83,9 +93,19 @@ namespace Cryptograph_Whois_DNS_Tools.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap dnsimage {
+        internal static System.Drawing.Bitmap csr {
             get {
-                object obj = ResourceManager.GetObject("dnsimage", resourceCulture);
+                object obj = ResourceManager.GetObject("csr", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap dnsicon {
+            get {
+                object obj = ResourceManager.GetObject("dnsicon", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -156,6 +176,16 @@ namespace Cryptograph_Whois_DNS_Tools.Properties {
         internal static System.Drawing.Bitmap srv {
             get {
                 object obj = ResourceManager.GetObject("srv", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap SSL {
+            get {
+                object obj = ResourceManager.GetObject("SSL", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

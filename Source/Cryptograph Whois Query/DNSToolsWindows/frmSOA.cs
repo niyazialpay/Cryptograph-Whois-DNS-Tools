@@ -17,6 +17,7 @@ namespace Cryptograph_Whois_DNS_Tools
             progressbar.Visible = true;
             btnQuery.Enabled = false;
             txtUrl.Enabled = false;
+            contextMenuStrip1.Enabled = false;
             backgroundWorker1.RunWorkerAsync(new Dictionary<string, string>()
                 {
                     { "url", txtUrl.Text },
@@ -56,6 +57,8 @@ namespace Cryptograph_Whois_DNS_Tools
                     txtUrl.Enabled = true;
                     backgroundWorker1.ReportProgress(0);
                     progressbar.Value = 0;
+                    txtUrl.Focus();
+                    contextMenuStrip1.Enabled = true;
                 }
             }
         }
@@ -73,6 +76,8 @@ namespace Cryptograph_Whois_DNS_Tools
 
         private void clearToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            txtUrl.Focus();
+            txtUrl.Clear();
             listView1.Items.Clear();
         }
 

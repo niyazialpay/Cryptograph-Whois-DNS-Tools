@@ -8,7 +8,7 @@
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Cryptograph_Whois_DNS_Tools</RootNamespace>
-    <AssemblyName>Cryptograph Whois &amp; DNS Tools</AssemblyName>
+    <AssemblyName>Cryptograph Whois - DNS &amp; SSL Tools</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -30,7 +30,7 @@
     <PublisherName>M. Niyazi Alpay</PublisherName>
     <SuiteName>Cryptograph</SuiteName>
     <ApplicationRevision>5</ApplicationRevision>
-    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <ApplicationVersion>1.1.1.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <PublishWizardCompleted>true</PublishWizardCompleted>
     <BootstrapperEnabled>true</BootstrapperEnabled>
@@ -81,9 +81,8 @@
     <SignAssembly>false</SignAssembly>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="DNS, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>bin\Debug\DNS.dll</HintPath>
+    <Reference Include="DNS">
+      <HintPath>bin\Release\inc\DNS.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -110,6 +109,18 @@
     </Compile>
     <Compile Include="DNSToolsWindows\frmCname.Designer.cs">
       <DependentUpon>frmCname.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SSLToolsWindows\frmCertificate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SSLToolsWindows\frmCertificate.Designer.cs">
+      <DependentUpon>frmCertificate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SSLToolsWindows\frmCSR.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SSLToolsWindows\frmCSR.Designer.cs">
+      <DependentUpon>frmCSR.cs</DependentUpon>
     </Compile>
     <Compile Include="frmMain.cs">
       <SubType>Form</SubType>
@@ -159,13 +170,15 @@
     <Compile Include="frmSettings.Designer.cs">
       <DependentUpon>frmSettings.cs</DependentUpon>
     </Compile>
+    <Compile Include="SSLToolsWindows\frmSSLCheck.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SSLToolsWindows\frmSSLCheck.Designer.cs">
+      <DependentUpon>frmSSLCheck.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Functions.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Resources.resx</DependentUpon>
-    </Compile>
     <Compile Include="Classes\whois.cs" />
     <Compile Include="Classes\Settings.cs" />
     <EmbeddedResource Include="DNSToolsWindows\frmA.resx">
@@ -173,6 +186,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="DNSToolsWindows\frmCname.resx">
       <DependentUpon>frmCname.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SSLToolsWindows\frmCertificate.resx">
+      <DependentUpon>frmCertificate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SSLToolsWindows\frmCSR.resx">
+      <DependentUpon>frmCSR.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmMain.resx">
       <DependentUpon>frmMain.cs</DependentUpon>
@@ -198,6 +217,9 @@
     <EmbeddedResource Include="frmSettings.resx">
       <DependentUpon>frmSettings.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="SSLToolsWindows\frmSSLCheck.resx">
+      <DependentUpon>frmSSLCheck.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <SubType>Designer</SubType>
@@ -208,6 +230,11 @@
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Settings.settings</DependentUpon>
@@ -236,9 +263,12 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="favicon.ico" />
-    <None Include="Resources\dnsimage.png" />
     <None Include="Resources\srv.png" />
     <None Include="Resources\settings_image.png" />
+    <None Include="Resources\dns-icon.png" />
+    <None Include="Resources\SSL.png" />
+    <None Include="Resources\certificate.png" />
+    <None Include="Resources\csr.png" />
     <Content Include="Resources\whois.png" />
     <None Include="Resources\soa.png" />
     <None Include="Resources\http.png" />
@@ -248,6 +278,17 @@
     <None Include="Resources\cname.png" />
     <None Include="Resources\a.png" />
     <None Include="Resources\edit_clear.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="CERTENROLLLib">
+      <Guid>{728AB348-217D-11DA-B2A4-000E7BBB2B09}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

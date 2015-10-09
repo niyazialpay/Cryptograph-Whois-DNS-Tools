@@ -11,7 +11,7 @@ namespace Cryptograph_Whois_DNS_Tools
         private string server, cache;
         public string SettingsRead(string name)
         {
-            XmlTextReader xmlRead = new XmlTextReader(AppDomain.CurrentDomain.BaseDirectory + "\\settings.xml");
+            XmlTextReader xmlRead = new XmlTextReader(AppDomain.CurrentDomain.BaseDirectory + "\\inc\\settings.xml");
             try
             {
                 while (xmlRead.Read())

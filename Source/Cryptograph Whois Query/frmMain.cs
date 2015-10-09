@@ -31,6 +31,7 @@ namespace Cryptograph_Whois_DNS_Tools
                 progressbar.Visible = true;
                 btnQuery.Enabled = false;
                 txtUrl.Enabled = false;
+                contextMenuStrip1.Enabled = false;
                 backgroundWorker1.RunWorkerAsync(new Dictionary<string, string>()
                 {
                     { "url", txtUrl.Text },
@@ -49,6 +50,8 @@ namespace Cryptograph_Whois_DNS_Tools
             if (result == DialogResult.Yes)
             {
                 e.Cancel = false;
+                if (System.IO.File.Exists(AppDomain.CurrentDomain.BaseDirectory + "\\inc\\certificate.cer"))
+                    System.IO.File.Delete(AppDomain.CurrentDomain.BaseDirectory + "\\inc\\certificate.cer");
             }
             else if (result == DialogResult.No)
             {
@@ -172,6 +175,53 @@ namespace Cryptograph_Whois_DNS_Tools
             }
         }
 
+        private void sslCheck_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void csrCheck_click(object sender, EventArgs e)
+        {
+            frmCSR frm = new frmCSR();
+            if (Application.OpenForms["frmCSR"] == null)
+            {
+                frm.Name = "frmCSR";
+                frm.Show();
+            }
+            else
+            {
+                MessageBox.Show("CSR Decoder window already open", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
+
+        private void certificateCheck_click(object sender, EventArgs e)
+        {
+            frmCertificate frm = new frmCertificate();
+            if (Application.OpenForms["frmCertificate"] == null)
+            {
+                frm.Name = "frmCertificate";
+                frm.Show();
+            }
+            else
+            {
+                MessageBox.Show("Certificate Decoder window already open", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
+
+        private void sSLToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmSSLCheck frm = new frmSSLCheck();
+            if (Application.OpenForms["frmSSLCheck"] == null)
+            {
+                frm.Name = "frmSSLCheck";
+                frm.Show();
+            }
+            else
+            {
+                MessageBox.Show("SSL Check window already open", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
+
         private void listviewDoubleClick(object sender, EventArgs e)
         {
             MessageBox.Show(aRecordView.SelectedItems[0].SubItems[1].Text + " - copied to clipboard", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -195,6 +245,7 @@ namespace Cryptograph_Whois_DNS_Tools
             idnListView.Items.Clear();
             txtUrl.Clear();
             whoisTextBox.Clear();
+            txtUrl.Focus();
         }
 
         private void toolStripSplitButton1_Click(object sender, EventArgs e)
@@ -331,6 +382,8 @@ namespace Cryptograph_Whois_DNS_Tools
                     {
                         ListViewItem lvimx = new ListViewItem();
                         lvimx.Text = mxitem;
+
+                        //mx a item
                         foreach (string mxaitem in dns.ARecords(mxitem))
                         {
                             lvimx.SubItems.Add(mxaitem);
@@ -374,8 +427,14 @@ namespace Cryptograph_Whois_DNS_Tools
                     txtUrl.Enabled = true;
                     backgroundWorker1.ReportProgress(0);
                     progressbar.Value = 0;
+                    contextMenuStrip1.Enabled = true;
                 }
             }
+        }
+
+        private void whoisTextBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            txtUrl.Focus();
         }
     }
 }
