@@ -2,10 +2,10 @@
 using System.Drawing;
 using System.Windows.Forms;
 using System.Security.Cryptography.X509Certificates;
-using System.Net;
 using System.Linq;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Net;
 
 namespace Cryptograph_Whois_DNS_Tools
 {

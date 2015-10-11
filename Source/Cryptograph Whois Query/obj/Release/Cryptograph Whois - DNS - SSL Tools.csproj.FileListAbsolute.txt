@@ -3,8 +3,6 @@ C:\Users\MuhammedNiyazi\Documents\GitHub\Cryptograph-Whois-DNS-Tools\Source\Cryp
 C:\Users\MuhammedNiyazi\Documents\GitHub\Cryptograph-Whois-DNS-Tools\Source\Cryptograph Whois Query\bin\Release\Cryptograph Whois - DNS & SSL Tools.application
 C:\Users\MuhammedNiyazi\Documents\GitHub\Cryptograph-Whois-DNS-Tools\Source\Cryptograph Whois Query\bin\Release\Cryptograph Whois - DNS & SSL Tools.exe
 C:\Users\MuhammedNiyazi\Documents\GitHub\Cryptograph-Whois-DNS-Tools\Source\Cryptograph Whois Query\bin\Release\Cryptograph Whois - DNS & SSL Tools.pdb
-C:\Users\MuhammedNiyazi\Documents\GitHub\Cryptograph-Whois-DNS-Tools\Source\Cryptograph Whois Query\bin\Release\System.Net.Http.dll
-C:\Users\MuhammedNiyazi\Documents\GitHub\Cryptograph-Whois-DNS-Tools\Source\Cryptograph Whois Query\bin\Release\System.Net.Http.xml
 C:\Users\MuhammedNiyazi\Documents\GitHub\Cryptograph-Whois-DNS-Tools\Source\Cryptograph Whois Query\obj\Release\Interop.CERTENROLLLib.dll
 C:\Users\MuhammedNiyazi\Documents\GitHub\Cryptograph-Whois-DNS-Tools\Source\Cryptograph Whois Query\obj\Release\Cryptograph Whois - DNS - SSL Tools.csproj.ResolveComReference.cache
 C:\Users\MuhammedNiyazi\Documents\GitHub\Cryptograph-Whois-DNS-Tools\Source\Cryptograph Whois Query\obj\Release\Cryptograph_Whois_DNS_Tools.frmA.resources

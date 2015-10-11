@@ -224,8 +224,8 @@ namespace Cryptograph_Whois_DNS_Tools
 
         private void listviewDoubleClick(object sender, EventArgs e)
         {
-            MessageBox.Show(aRecordView.SelectedItems[0].SubItems[1].Text + " - copied to clipboard", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            Clipboard.SetText(aRecordView.SelectedItems[0].SubItems[1].Text);
+            MessageBox.Show(idnListView.SelectedItems[0].SubItems[1].Text + " - copied to clipboard", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            Clipboard.SetText(idnListView.SelectedItems[0].SubItems[1].Text);
         }
 
         private void whoisTextBox_LinkClicked(object sender, LinkClickedEventArgs e)

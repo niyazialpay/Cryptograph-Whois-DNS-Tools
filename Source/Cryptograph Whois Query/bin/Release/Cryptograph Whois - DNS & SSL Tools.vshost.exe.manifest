@@ -54,14 +54,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Cryptograph Whois - DNS &amp; SSL Tools.exe" size="348632">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Cryptograph Whois - DNS &amp; SSL Tools.exe" size="347648">
       <assemblyIdentity name="Cryptograph Whois - DNS &amp; SSL Tools" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>yJxxwW6Ma1Kb7IXmuuZFYnDAwa0=</dsig:DigestValue>
+        <dsig:DigestValue>Z2H9V0SM903MyoufZcgiL1oPgjM=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -74,18 +74,6 @@
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
         <dsig:DigestValue>FYwZVASdXTOHUDp0R+fnGfYPS+s=</dsig:DigestValue>
-      </hash>
-    </dependentAssembly>
-  </dependency>
-  <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="System.Net.Http.dll" size="180904">
-      <assemblyIdentity name="System.Net.Http" version="2.0.0.0" publicKeyToken="B03F5F7F11D50A3A" language="neutral" processorArchitecture="msil" />
-      <hash>
-        <dsig:Transforms>
-          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
-        </dsig:Transforms>
-        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>0twMWD5AbjRM++Tzmr6CIjUZKcM=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
