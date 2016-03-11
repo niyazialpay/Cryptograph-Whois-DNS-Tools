@@ -26,3 +26,31 @@ C:\Users\MuhammedNiyazi\Documents\GitHub\Cryptograph-Whois-DNS-Tools\Source\Cryp
 C:\Users\MuhammedNiyazi\Documents\GitHub\Cryptograph-Whois-DNS-Tools\Source\Cryptograph Whois Query\obj\Release\Cryptograph Whois - DNS & SSL Tools.exe
 C:\Users\MuhammedNiyazi\Documents\GitHub\Cryptograph-Whois-DNS-Tools\Source\Cryptograph Whois Query\obj\Release\Cryptograph Whois - DNS & SSL Tools.pdb
 C:\Users\MuhammedNiyazi\Documents\GitHub\Cryptograph-Whois-DNS-Tools\Source\Cryptograph Whois Query\obj\Release\Cryptograph Whois - DNS - SSL Tools.csprojResolveAssemblyReference.cache
+C:\Users\muham\Documents\GitHub\Cryptograph-Whois-DNS-Tools\Source\Cryptograph Whois Query\bin\Release\Cryptograph Whois - DNS & SSL Tools.exe.config
+C:\Users\muham\Documents\GitHub\Cryptograph-Whois-DNS-Tools\Source\Cryptograph Whois Query\obj\Release\Interop.CERTENROLLLib.dll
+C:\Users\muham\Documents\GitHub\Cryptograph-Whois-DNS-Tools\Source\Cryptograph Whois Query\obj\Release\Cryptograph Whois - DNS - SSL Tools.csproj.ResolveComReference.cache
+C:\Users\muham\Documents\GitHub\Cryptograph-Whois-DNS-Tools\Source\Cryptograph Whois Query\obj\Release\Cryptograph Whois - DNS & SSL Tools.exe
+C:\Users\muham\Documents\GitHub\Cryptograph-Whois-DNS-Tools\Source\Cryptograph Whois Query\obj\Release\Cryptograph Whois - DNS & SSL Tools.pdb
+C:\Users\muham\Documents\GitHub\Cryptograph-Whois-DNS-Tools\Source\Cryptograph Whois Query\bin\Release\Cryptograph Whois - DNS & SSL Tools.exe.manifest
+C:\Users\muham\Documents\GitHub\Cryptograph-Whois-DNS-Tools\Source\Cryptograph Whois Query\bin\Release\Cryptograph Whois - DNS & SSL Tools.application
+C:\Users\muham\Documents\GitHub\Cryptograph-Whois-DNS-Tools\Source\Cryptograph Whois Query\bin\Release\Cryptograph Whois - DNS & SSL Tools.exe
+C:\Users\muham\Documents\GitHub\Cryptograph-Whois-DNS-Tools\Source\Cryptograph Whois Query\bin\Release\Cryptograph Whois - DNS & SSL Tools.pdb
+C:\Users\muham\Documents\GitHub\Cryptograph-Whois-DNS-Tools\Source\Cryptograph Whois Query\obj\Release\Cryptograph Whois - DNS - SSL Tools.csprojResolveAssemblyReference.cache
+C:\Users\muham\Documents\GitHub\Cryptograph-Whois-DNS-Tools\Source\Cryptograph Whois Query\obj\Release\Cryptograph_Whois_DNS_Tools.frmA.resources
+C:\Users\muham\Documents\GitHub\Cryptograph-Whois-DNS-Tools\Source\Cryptograph Whois Query\obj\Release\Cryptograph_Whois_DNS_Tools.frmCname.resources
+C:\Users\muham\Documents\GitHub\Cryptograph-Whois-DNS-Tools\Source\Cryptograph Whois Query\obj\Release\Cryptograph_Whois_DNS_Tools.frmCertificate.resources
+C:\Users\muham\Documents\GitHub\Cryptograph-Whois-DNS-Tools\Source\Cryptograph Whois Query\obj\Release\Cryptograph_Whois_DNS_Tools.frmCSR.resources
+C:\Users\muham\Documents\GitHub\Cryptograph-Whois-DNS-Tools\Source\Cryptograph Whois Query\obj\Release\Cryptograph_Whois_DNS_Tools.frmMain.resources
+C:\Users\muham\Documents\GitHub\Cryptograph-Whois-DNS-Tools\Source\Cryptograph Whois Query\obj\Release\Cryptograph_Whois_DNS_Tools.frmNS.resources
+C:\Users\muham\Documents\GitHub\Cryptograph-Whois-DNS-Tools\Source\Cryptograph Whois Query\obj\Release\Cryptograph_Whois_DNS_Tools.frmPTR.resources
+C:\Users\muham\Documents\GitHub\Cryptograph-Whois-DNS-Tools\Source\Cryptograph Whois Query\obj\Release\Cryptograph_Whois_DNS_Tools.frmSOA.resources
+C:\Users\muham\Documents\GitHub\Cryptograph-Whois-DNS-Tools\Source\Cryptograph Whois Query\obj\Release\Cryptograph_Whois_DNS_Tools.frmTXT.resources
+C:\Users\muham\Documents\GitHub\Cryptograph-Whois-DNS-Tools\Source\Cryptograph Whois Query\obj\Release\Cryptograph_Whois_DNS_Tools.frmMX.resources
+C:\Users\muham\Documents\GitHub\Cryptograph-Whois-DNS-Tools\Source\Cryptograph Whois Query\obj\Release\Cryptograph_Whois_DNS_Tools.frmSRV.resources
+C:\Users\muham\Documents\GitHub\Cryptograph-Whois-DNS-Tools\Source\Cryptograph Whois Query\obj\Release\Cryptograph_Whois_DNS_Tools.frmSettings.resources
+C:\Users\muham\Documents\GitHub\Cryptograph-Whois-DNS-Tools\Source\Cryptograph Whois Query\obj\Release\Cryptograph_Whois_DNS_Tools.frmSSLCheck.resources
+C:\Users\muham\Documents\GitHub\Cryptograph-Whois-DNS-Tools\Source\Cryptograph Whois Query\obj\Release\Cryptograph_Whois_DNS_Tools.Properties.Resources.resources
+C:\Users\muham\Documents\GitHub\Cryptograph-Whois-DNS-Tools\Source\Cryptograph Whois Query\obj\Release\Cryptograph Whois - DNS - SSL Tools.csproj.GenerateResource.Cache
+C:\Users\muham\Documents\GitHub\Cryptograph-Whois-DNS-Tools\Source\Cryptograph Whois Query\obj\Release\Cryptograph Whois - DNS & SSL Tools.TrustInfo.xml
+C:\Users\muham\Documents\GitHub\Cryptograph-Whois-DNS-Tools\Source\Cryptograph Whois Query\obj\Release\Cryptograph Whois - DNS & SSL Tools.exe.manifest
+C:\Users\muham\Documents\GitHub\Cryptograph-Whois-DNS-Tools\Source\Cryptograph Whois Query\obj\Release\Cryptograph Whois - DNS & SSL Tools.application

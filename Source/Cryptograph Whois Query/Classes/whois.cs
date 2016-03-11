@@ -35,7 +35,7 @@ namespace Cryptograph_Whois_DNS_Tools
 
         private string getWhoisServer(string tld)
         {
-            string[,] whoisServers = new string[143, 2] {
+            string[,] whoisServers = new string[145, 2] {
                 { "com", "whois.verisign-grs.com" },
                 { "net", "whois.verisign-grs.com" },
                 { "org","whois.publicinterestregistry.net" },
@@ -178,7 +178,9 @@ namespace Cryptograph_Whois_DNS_Tools
                 { "vg","whois.adamsnames.tc"},
                 { "yu","whois.ripe.net" },
                 { "science","whois.iana.org" },
-                { "xyz", "whois.nic.xyz" }
+                { "xyz", "whois.nic.xyz" },
+                { "ist", "whois.nic.istanbul" },
+                { "istanbul", "whois.nic.istanbul" }
             };
 
 
@@ -753,6 +755,14 @@ namespace Cryptograph_Whois_DNS_Tools
             else if (tld == "xyz")
             {
                 return whoisServers[142, 1];
+            }
+            else if (tld == "ist")
+            {
+                return whoisServers[143, 1];
+            }
+            else if (tld == "istanbul")
+            {
+                return whoisServers[144, 1];
             }
             else
             {
